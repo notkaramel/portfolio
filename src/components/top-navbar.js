@@ -8,8 +8,8 @@ class NavBar extends React.Component {
     render() {
         
         return (
-            <div className="topnav">
-                <a className="topright" href="#welcome">Antoine Phan</a>
+            <div className="navbar">
+                <a className="topright" href="#root">Antoine Phan</a>
                 <a className="topleft" href="#about">About Me</a>
                 <a className="topleft" href="#projects">Projects</a>
                 <a className="topleft" href="#skills">Skills</a>

@@ -9,10 +9,14 @@ import MyProjects from './components/my-projects';
 import Citations from './components/citations';
 import PastExperience from './components/past-exp';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const navbar = ReactDOM.createRoot(document.getElementById('navbar'));
+navbar.render(
+  <NavBar />
+)
+
+const root = ReactDOM.createRoot(document.getElementById('content'));
 root.render(
   <React.StrictMode>
-    <NavBar/>
     <AboutMe/>
     <MyProjects/>
     <MySkills/>

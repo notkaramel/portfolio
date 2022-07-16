@@ -6,7 +6,7 @@ const linkedin_icon = "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linked
 class AboutMe extends React.Component {
     render() {
         return (
-            <div className="about-me">
+            <div className="about-me" id="about">
                 <h1>~ ABOUT ME ~</h1>
                 <div className="profile-pic">
                     <img

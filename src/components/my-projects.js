@@ -85,7 +85,7 @@ class MyProjects extends React.Component {
         ChordProgressionBuilder.writePost("An app that builds a chord progression based on your desired voice & progression.");
         
         return (
-            <div className="my-projects" id="my-projects">
+            <div className="my-projects" id="projects">
                 <h1>~ Projects ~</h1>
                 <ul>
                     <li>{Portfolio.createPost()}</li>
