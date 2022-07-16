@@ -1,5 +1,4 @@
 import React from "react";
-import { PropTypes } from "react";
 import './css/my-projects.css'
 
 const github_icon = "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
@@ -31,7 +30,7 @@ class Project {
                     <img src={require('./images/exit-top-right.png')}
                         alt={this.link}
                         
-                        width="45px"/>
+                        width="30px"/>
                 </a>
             )
             return linktoproj;
@@ -55,7 +54,7 @@ class Project {
                         title={this.name}>
                         <img src={github_icon} 
                              alt="github_link"
-                             width="50px"></img>
+                             width="30px"></img>
                     </a>
                 </p>
                 <p className="project-link" id={this.name+"-link"}>{this.showLink()}</p>
@@ -80,16 +79,20 @@ class MyProjects extends React.Component {
 
         let Portfolio = new Project("Portfolio", 2022, "https://github.com/notkaramel/notkaramel.github.io");
         Portfolio.setLink("https://notkaramel.github.io");
-        Portfolio.writePost("This portfolio!")
+        Portfolio.writePost("This portfolio!");
+
+        let ChordProgressionBuilder = new Project("Chord Progression Builder", 2022, "https://github.com/notkaramel/ChordProgressionBuilder");
+        ChordProgressionBuilder.writePost("An app that builds a chord progression based on your desired voice & progression.");
         
         return (
-            <div className="my-projects">
+            <div className="my-projects" id="my-projects">
                 <h1>~ Projects ~</h1>
                 <ul>
                     <li>{Portfolio.createPost()}</li>
                     <li>{JavaCalculator.createPost()}</li>
                     <li>{WordleHelper.createPost()}</li>
                     <li>{WebTutor.createPost()}</li>
+                    <li>{ChordProgressionBuilder.createPost()}</li>
                 </ul>
             </div>
         );

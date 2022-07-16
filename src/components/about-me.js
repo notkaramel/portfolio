@@ -1,7 +1,7 @@
 import React from "react";
 import './css/about-me.css'
 const github_icon = "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
-
+const linkedin_icon = "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg"
 
 class AboutMe extends React.Component {
     render() {
@@ -17,10 +17,10 @@ class AboutMe extends React.Component {
 
                 <div className="info">
                     <ul>
-                        <li>My name is Antoine Phan.</li>
-                        <li>U1 Electrical Engineering @ McGill University </li>
-                        <li>Location: Montreal, Canada.</li>
-                        <li>CGPA: 3.52</li>
+                        <li> 👋 Hi! I'm Antoine Phan.</li>
+                        <li> 🎓 U1 Electrical Engineering @ McGill University </li>
+                        <li> 📍 Montreal, Canada.</li>
+                        <li> 4️⃣ CGPA: 3.52</li>
                     </ul>
                 </div>
 
@@ -28,11 +28,13 @@ class AboutMe extends React.Component {
                     <ul>
                         <li id="github">
                             <a href="https://github.com/notkaramel" target="_blank" rel="noreferrer">
-                                <img src={github_icon} alt="github_logo" width="50px"/>
+                                <img src={github_icon} alt="github_icon" width="50px"/>
                             </a>
                         </li>
                         <li id="linkedin">
-
+                            <a href="https://www.linkedin.com/in/antoinephan/" target={"_blank"} rel={"noreferrer"}>
+                                <img src={linkedin_icon} alt="linkedin_icon" width="50px" />
+                            </a>
                         </li>
                     </ul>
                 </div>

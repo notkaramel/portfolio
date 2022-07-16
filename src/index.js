@@ -7,7 +7,7 @@ import AboutMe from './components/about-me';
 import MySkills from './components/my-skills';
 import MyProjects from './components/my-projects';
 import Citations from './components/citations';
-
+import PastExperience from './components/past-exp';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -16,6 +16,7 @@ root.render(
     <AboutMe/>
     <MyProjects/>
     <MySkills/>
+    <PastExperience/>
     <Citations/>
   </React.StrictMode>
 );
