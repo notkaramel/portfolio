@@ -2,8 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import NavBar from './components/top-navbar/top-navbar';
-import AboutMe from './components/about-me/about-me';
+import NavBar from './components/top-navbar';
+import AboutMe from './components/about-me';
+import MySkills from './components/my-skills';
+import MyProjects from './components/my-projects';
+import Citations from './components/citations';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -11,6 +14,9 @@ root.render(
   <React.StrictMode>
     <NavBar/>
     <AboutMe/>
+    <MyProjects/>
+    <MySkills/>
+    <Citations/>
   </React.StrictMode>
 );
 
