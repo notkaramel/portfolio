@@ -1,3 +1,4 @@
-# Antoine Phan's Portfolio
+# [Antoine Phan's Portfolio](https://notkaramel.github.io/)
 ### Showcasing my abilities to employers
-[github page](https://notkaramel.github.io/portfolio/)
+> in development
+
