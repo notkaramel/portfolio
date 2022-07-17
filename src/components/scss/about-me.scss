@@ -10,6 +10,8 @@
     margin-left: 10%;
     margin-right: 10%;
     .info-table{
+        display: grid;
+        place-items: center;
         width: 100%;
         align-content: center;
         td{

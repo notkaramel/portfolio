@@ -1,14 +1,14 @@
 import React from "react";
-import './css/my-projects.css'
+import './scss/my-projects.scss'
 
 const github_icon = "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg";
 const linkto_icon = require('./icons/exit-top-right.png');
 
+// Project object/class for each project I have done!
 class Project {
-    constructor(project_name, prj_date, github_link)
+    constructor(project_name, github_link)
     {
         this.name = project_name;
-        this.date = prj_date;
         this.github = github_link;
         this.link = "";
     }
@@ -45,7 +45,6 @@ class Project {
         
         return (
             <div className="Project" id={project_id}>
-                <p className="date">Since {this.date}</p>
                 <p className="project-title">{this.name}</p>
                 <p className="project-post">{this.post}</p>
                 <p className="github-link">
@@ -67,18 +66,18 @@ class Project {
 class MyProjects extends React.Component {
     render()
     {
-        let WebTutor = new Project("web_tutorial_b0k32a", 2018, "https://github.com/notkaramel/web_tutorial_B0K32A");
+        let WebTutor = new Project("web_tutorial_b0k32a", "https://github.com/notkaramel/web_tutorial_B0K32A");
         WebTutor.setLink("https://b0k32a-webtutor.herokuapp.com");
         WebTutor.writePost("A front-end website written in HTML and CSS, then deployed on Heroku.");
         
-        let WordleHelper = new Project("Wordle Helper", 2022, "https://github.com/notkaramel/WordleHelper");
+        let WordleHelper = new Project("Wordle Helper", "https://github.com/notkaramel/WordleHelper");
         WordleHelper.writePost("A Chrome extension that helps you solve Wordle (hard mode enforced)");
         
-        let JavaCalculator = new Project("Java Calculator", 2022, "https://github.com/notkaramel/JavaCalculator");
+        let JavaCalculator = new Project("Java Calculator", "https://github.com/notkaramel/JavaCalculator");
         JavaCalculator.writePost("A calculator application written in Java (JDK 18)");
         //scrape this.github -> class="f4 my-3"
 
-        let Portfolio = new Project("Portfolio", 2022, "https://github.com/notkaramel/notkaramel.github.io");
+        let Portfolio = new Project("Portfolio", "https://github.com/notkaramel/notkaramel.github.io");
         Portfolio.setLink("https://notkaramel.github.io");
         Portfolio.writePost("This portfolio!");
 
@@ -88,13 +87,13 @@ class MyProjects extends React.Component {
         return (
             <div className="my-projects" id="projects">
                 <h1 className="section-title">~ Projects ~</h1>
-                <ul>
-                    <li>{Portfolio.createPost()}</li>
-                    <li>{JavaCalculator.createPost()}</li>
-                    <li>{WordleHelper.createPost()}</li>
-                    <li>{WebTutor.createPost()}</li>
-                    <li>{ChordProgressionBuilder.createPost()}</li>
-                </ul>
+                <element className="my-projects__list">
+                    <li className="my-projects__list-item">{Portfolio.createPost()}</li>
+                    <li className="my-projects__list-item">{JavaCalculator.createPost()}</li>
+                    <li className="my-projects__list-item">{WordleHelper.createPost()}</li>
+                    <li className="my-projects__list-item">{WebTutor.createPost()}</li>
+                    <li className="my-projects__list-item">{ChordProgressionBuilder.createPost()}</li>
+                </element>
             </div>
         );
     }

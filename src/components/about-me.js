@@ -1,15 +1,45 @@
 import React from "react";
 import './scss/about-me.scss'
-const github_icon = "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
-const linkedin_icon = "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg"
 
-class AboutMe extends React.Component {
-    render() {
-        return (
-            <div className="about-me" id="about-me">
-                <div className="section-title"></div>
-                <table className="info-table">
-                    <tbody>
+const social_media = () => {
+    const github_icon = "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg";
+    const linkedin_icon = "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg";
+    const email_icon = "https://upload.wikimedia.org/wikipedia/commons/5/50/TK_email_icon.svg";
+
+    const makeSocialMedia = (id, icon, url) => {
+        return (<span id={id}>
+            <a href={url} target="_blank" rel="noreferrer">
+                <img src={icon} alt={id + "_icon"} width="50px" />
+            </a>
+        </span>);
+    }
+
+    let github = makeSocialMedia("github", github_icon, "https://github.com/notkaramel");
+    let linkedin = makeSocialMedia("linkedin", linkedin_icon, "https://www.linkedin.com/in/antoinephan/");
+    let email = makeSocialMedia("email", email_icon, "mailto:hoangtuan11102@gmail.com");
+
+    return (
+        <div className="social-media">
+            <p>
+                {github}
+                {linkedin}
+                {email}
+            </p>
+        </div>
+    );
+}
+
+const AboutMe = () => {
+    let greeting = <p>👋 Hi! I'm Antoine Phan.</p>;
+    let education = <p> 🎓 U1 Electrical Engineering @ McGill University </p>;
+    let location = <p> 📍 Montreal, Canada.</p>;
+    let cgpa = <p> 📈 CGPA: 3.52</p>;
+    let languages = <p> 🌐 Languages: English, French, Vietnamese, Spanish</p>;
+    return (
+        <div className="about-me" id="about-me">
+            <div className="section-title"></div>
+            <table className="info-table">
+                <tbody>
                     {/* The profile picture spans 2 rows of the table */}
                     <tr>
                         <td className="profile-pic" rowSpan={"2"}>
@@ -19,38 +49,20 @@ class AboutMe extends React.Component {
                             </img>
                         </td>
                         <td className="info">
-                            <p> 👋 Hi! I'm Antoine Phan.</p>
-                            <p> 🎓 U1 Electrical Engineering @ McGill University </p>
-                            <p> 📍 Montreal, Canada.</p>
-                            <p> 4️⃣ CGPA: 3.52</p>
+                            {greeting}
+                            {education}
+                            {location}
+                            {cgpa}
+                            {languages}
                         </td>
                     </tr>
                     <tr>
-                        <td className="social-media">
-                            <p>
-                                <span id="github">
-                                    <a href="https://github.com/notkaramel" target="_blank" rel="noreferrer">
-                                        <img src={github_icon} alt="github_icon" width="50px" />
-                                    </a>
-                                </span>
-                                <span id="linkedin">
-                                    <a href="https://www.linkedin.com/in/antoinephan/" target={"_blank"} rel={"noreferrer"}>
-                                        <img src={linkedin_icon} alt="linkedin_icon" width="50px" />
-                                    </a>
-                                </span>
-                                <span id="email">
-                                    <a href="mailto:hoangtuan11102@gmail.com">
-                                        <img src="https://img.icons8.com/color/48/000000/email.png" alt="email_icon" width="50px" />
-                                    </a>
-                                </span>
-                            </p>
-                        </td>
+                        {social_media}
                     </tr>
-                    </tbody>
-                </table>
-            </div>
-        );
-    }
+                </tbody>
+            </table>
+        </div>
+    );
 }
 
 export default AboutMe;
