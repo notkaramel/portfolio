@@ -6,9 +6,10 @@ const linkedin_icon = "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linked
 class AboutMe extends React.Component {
     render() {
         return (
-            <div className="about-me" id="about">
-                <h1>~ ABOUT ME ~</h1>
-                <table>
+            <div className="about-me" id="about-me">
+                <div className="section-title"></div>
+                <table className="info-table">
+                    <tbody>
                     {/* The profile picture spans 2 rows of the table */}
                     <tr>
                         <td className="profile-pic" rowSpan={"2"}>
@@ -45,6 +46,7 @@ class AboutMe extends React.Component {
                             </p>
                         </td>
                     </tr>
+                    </tbody>
                 </table>
             </div>
         );
