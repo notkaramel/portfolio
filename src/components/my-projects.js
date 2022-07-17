@@ -87,7 +87,7 @@ class MyProjects extends React.Component {
         
         return (
             <div className="my-projects" id="projects">
-                <h1>~ Projects ~</h1>
+                <h1 className="section-title">~ Projects ~</h1>
                 <ul>
                     <li>{Portfolio.createPost()}</li>
                     <li>{JavaCalculator.createPost()}</li>

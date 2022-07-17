@@ -5,7 +5,7 @@ class Footer extends React.Component {
         return (
             <div>
                 <div className="citations" id="citations">
-                    <h3>~Citations~</h3>
+                    <h3 className="section-title">~Citations~</h3>
 
                     <p>Source for icons: <a href="https://devicon.dev" target={"_blank"} rel={"noreferrer"}>devicon.dev</a></p>
                 </div>

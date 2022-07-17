@@ -40,7 +40,7 @@ class MySkills extends React.Component {
 
         return (
             <div className="my-skills" id="skills">
-                <h1>~ Skills ~</h1>
+                <h1 className="section-title">~ Skills ~</h1>
                 {new Skill("c")}
                 {new Skill("cplusplus")}
                 {new Skill("java")}
