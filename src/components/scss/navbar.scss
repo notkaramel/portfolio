@@ -1,27 +1,31 @@
 .navbar {
-    background-color: rgb(10, 43, 105);
-    overflow: hidden;
+    background-color: rgb(255,255,255,0.6);
     position: fixed;
     top: 0;
-    left: 0;
     width: 100%;
-    border-bottom: 50px;
-    a{
-        display: inline-block;
-        color: white;
+    
+    a {
+        float: left;
+        display: block;
+        color: rgb(0, 0, 0);
         text-align: center;
-        padding: 14px 16px;
+        padding: 16px 16px;
         text-decoration: none;
-        font-size: 17px;
+        font-size: 18px;
+    }
+
+    .topright a{
+        color: black;
+        background-color: bisque;
+        margin-left: 10%;
+    }
+
+    .topleft {
+        float: right;
+        margin-right: 10%;
     }
 
     a:hover {
-        background-color: rgba(255, 255, 255, 0.25);
+        background-color: rgba(192, 121, 121, 0.596);
     }
-
-    a.topright{
-        background-color: blueviolet;
-        color: white;
-    }
-
 }
