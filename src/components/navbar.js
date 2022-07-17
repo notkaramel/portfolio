@@ -1,7 +1,7 @@
-// Main className is topnav
+// Main className is navbar
 
 import React from "react";
-import './css/top-navbar.css';
+import './scss/navbar.scss';
 
 class NavBar extends React.Component {
 
@@ -9,7 +9,7 @@ class NavBar extends React.Component {
         
         return (
             <div className="navbar">
-                <a className="topright" href="#root">Antoine Phan</a>
+                <a className="topright" href="#home">Antoine Phan</a>
                 <a className="topleft" href="#about">About Me</a>
                 <a className="topleft" href="#projects">Projects</a>
                 <a className="topleft" href="#skills">Skills</a>

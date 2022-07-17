@@ -14,7 +14,6 @@ const plain_icon_link = (file) => {
 class Skill {
     constructor(skill,need_plain) {
         this.skill = skill;
-        console.log(need_plain);
         this.icon = need_plain ? plain_icon_link(skill) : icon_link(skill);
         return (
             <p className="skill-icon">
@@ -51,6 +50,7 @@ class MySkills extends React.Component {
                 
                 {new Skill("html5")}
                 {new Skill("css3")}
+                {new Skill ("sass")}
                 {new Skill("markdown")}
                 {new Skill("javascript")}
                 {new Skill("react")}

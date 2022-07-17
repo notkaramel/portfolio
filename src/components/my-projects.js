@@ -1,7 +1,8 @@
 import React from "react";
 import './css/my-projects.css'
 
-const github_icon = "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+const github_icon = "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg";
+const linkto_icon = require('./icons/exit-top-right.png');
 
 class Project {
     constructor(project_name, prj_date, github_link)
@@ -27,7 +28,7 @@ class Project {
                     rel="noreferrer"
                     target="_blank"
                     >
-                    <img src={require('./images/exit-top-right.png')}
+                    <img src={linkto_icon}
                         alt={this.link}
                         
                         width="30px"/>
