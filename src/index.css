@@ -9,8 +9,10 @@ body {
 }
 
 .section-title{
-  padding-top: 60px;
+  padding-top: 4rem;
+  padding-bottom: 1rem;
   margin: 0px;
+  text-align: center;
 }
 
 code {

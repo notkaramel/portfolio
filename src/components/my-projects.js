@@ -30,7 +30,6 @@ class Project {
                     >
                     <img src={linkto_icon}
                         alt={this.link}
-                        
                         width="30px"/>
                 </a>
             )
@@ -44,10 +43,11 @@ class Project {
         // console.log(project_id);
         
         return (
-            <div className="Project" id={project_id}>
+            <div className="project-grid-item" id={project_id}>
                 <p className="project-title">{this.name}</p>
                 <p className="project-post">{this.post}</p>
-                <p className="github-link">
+                <p className="links">
+                    <span className="github-link">
                     <a  href={this.github}
                         target="_blank"
                         rel="noreferrer"
@@ -56,8 +56,12 @@ class Project {
                              alt="github_link"
                              width="30px"></img>
                     </a>
+                    </span>
+                    &nbsp;
+                    <span className="link-to-project" id={this.name + "-link"}>
+                        {this.showLink()}
+                    </span>
                 </p>
-                <p className="project-link" id={this.name+"-link"}>{this.showLink()}</p>
             </div>
         );
     }
@@ -74,6 +78,7 @@ class MyProjects extends React.Component {
         WordleHelper.writePost("A Chrome extension that helps you solve Wordle (hard mode enforced)");
         
         let JavaCalculator = new Project("Java Calculator", "https://github.com/notkaramel/JavaCalculator");
+        JavaCalculator.setLink("https://notkaramel.github.io/JavaCalculator/");
         JavaCalculator.writePost("A calculator application written in Java (JDK 18)");
         //scrape this.github -> class="f4 my-3"
 
@@ -85,15 +90,19 @@ class MyProjects extends React.Component {
         ChordProgressionBuilder.writePost("An app that builds a chord progression based on your desired voice & progression.");
         
         return (
-            <div className="my-projects" id="projects">
+            <div className="projects" id="projects">
                 <h1 className="section-title">~ Projects ~</h1>
-                <element className="my-projects__list">
-                    <li className="my-projects__list-item">{Portfolio.createPost()}</li>
-                    <li className="my-projects__list-item">{JavaCalculator.createPost()}</li>
-                    <li className="my-projects__list-item">{WordleHelper.createPost()}</li>
-                    <li className="my-projects__list-item">{WebTutor.createPost()}</li>
-                    <li className="my-projects__list-item">{ChordProgressionBuilder.createPost()}</li>
-                </element>
+                
+                {/* The project-grid the container of all the projects.
+                All projects within this sections are grid items. */}
+                <section className="project-grid">
+
+                    {Portfolio.createPost()}
+                    {JavaCalculator.createPost()}
+                    {WordleHelper.createPost()}
+                    {WebTutor.createPost()}
+                    {ChordProgressionBuilder.createPost()}
+                </section>
             </div>
         );
     }

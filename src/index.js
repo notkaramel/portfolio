@@ -12,7 +12,9 @@ import Footer from './components/footer';
 // Navigation bar section
 const navbar = ReactDOM.createRoot(document.getElementById('navbar'));
 navbar.render(
-  <NavBar />
+  <React.StrictMode>
+    <NavBar />
+  </React.StrictMode>
 )
 
 // Content section
@@ -29,7 +31,9 @@ content.render(
 // Footer section (citations and copyrights)
 const footer = ReactDOM.createRoot(document.getElementById('footer'));
 footer.render(
-  <Footer/>
+  <React.StrictMode>
+    <Footer />
+  </React.StrictMode>
 )
 
 // If you want to start measuring performance in your app, pass a function
