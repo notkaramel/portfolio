@@ -1,3 +1,5 @@
+@import './color-palette.sass';
+
 // Container of section title and all projects
 .projects {
     display: grid;
@@ -12,7 +14,7 @@
     
     // Containter of all projects (The grid)
     .project-grid {
-        background: #b6e48c;
+        background: $pastel-mint;
         display: grid;
         gap: 1rem;
         vertical-align: middle;
@@ -36,7 +38,7 @@
 
             // Make Projects's post look cool with shadow
             border-radius: 0.5em;
-            background-color: rgb(255, 255, 255);
+            background-color: white;
             box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.2);
 
             p{

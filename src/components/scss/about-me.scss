@@ -1,12 +1,16 @@
+@import './color-palette.sass';
+
 .profile-pic {
     img {
         vertical-align: middle;
-        width: 300px;
+        width: 14rem;
         border-radius: 50%;
     }
 }
 
 .about-me {
+    width: 100%;
+    color: black;
     margin-left: 10%;
     margin-right: 10%;
     .info-table{

@@ -37,7 +37,7 @@ const AboutMe = () => {
     let languages = <p> 🌐 Languages: English, French, Vietnamese, Spanish</p>;
     return (
         <div className="about-me" id="about-me">
-            <div className="section-title"></div>
+            <h1 className="section-title">~ About Me ~</h1>
             <table className="info-table">
                 <tbody>
                     {/* The profile picture spans 2 rows of the table */}
