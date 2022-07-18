@@ -1,0 +1,35 @@
+.skills{
+    
+    // Container for all skills (the grid)
+    .skills-grid{
+        background-color: aquamarine;
+        display: grid;
+        gap: 1rem;
+        vertical-align: middle;
+        text-align: center;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        transform: all 0.5s ;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));   
+        // Grid items (individual skill)
+        .skill{
+            padding: 1rem;
+            margin: 0;
+        }
+
+        section{
+            display: grid;
+            gap: 1rem;
+            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+            background-color: #fff;
+            border-radius: 0.5rem;
+            box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
+            transition: all 0.3s ease-in-out;
+            &:hover{
+                box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.2);
+            }
+
+
+        }
+    }
+}

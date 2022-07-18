@@ -86,7 +86,7 @@ class MyProjects extends React.Component {
         Portfolio.setLink("https://notkaramel.github.io");
         Portfolio.writePost("This portfolio!");
 
-        let ChordProgressionBuilder = new Project("Chord Progression Builder", 2022, "https://github.com/notkaramel/ChordProgressionBuilder");
+        let ChordProgressionBuilder = new Project("Chord Progression Builder", "https://github.com/notkaramel/ChordProgressionBuilder");
         ChordProgressionBuilder.writePost("An app that builds a chord progression based on your desired voice & progression.");
         
         return (
@@ -96,7 +96,6 @@ class MyProjects extends React.Component {
                 {/* The project-grid the container of all the projects.
                 All projects within this sections are grid items. */}
                 <section className="project-grid">
-
                     {Portfolio.createPost()}
                     {JavaCalculator.createPost()}
                     {WordleHelper.createPost()}

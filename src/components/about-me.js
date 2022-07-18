@@ -54,10 +54,8 @@ const AboutMe = () => {
                             {location}
                             {cgpa}
                             {languages}
+                            {social_media()}
                         </td>
-                    </tr>
-                    <tr>
-                        {social_media}
                     </tr>
                 </tbody>
             </table>

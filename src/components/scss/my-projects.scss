@@ -1,6 +1,5 @@
 // Container of section title and all projects
 .projects {
-    padding-bottom: 3rem;
     display: grid;
     // Section title
     .section-title {
@@ -17,16 +16,14 @@
         display: grid;
         gap: 1rem;
         vertical-align: middle;
-        padding: 2rem 2rem 2rem 2rem;
+        padding: 1em 0 0 0;
+        margin: 0 0 0 0;
         
         grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
         
         font-size: 1.5rem;
-        justify-content: center;
-        align-items: center;
-        transition: all 600ms;
-        color: rgb(0, 0, 0);
-        box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
+        //transition: all 600ms;
+        //box-shadow: rgba(37, 7, 77, 0.521) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
         height: 100%;
         border-radius: 0.4rem;
         overflow: hidden;
@@ -34,11 +31,10 @@
         // Grid items (Projects themselves)
         .project-grid-item {
             width: 20rem;
-            height: 16rem;
+            height: 20rem;
             text-align: center;
-            
 
-
+            // Make Projects's post look cool with shadow
             border-radius: 0.5em;
             background-color: rgb(255, 255, 255);
             box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.2);

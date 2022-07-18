@@ -1,5 +1,5 @@
 import React from "react";
-import './css/my-skills.css';
+import './scss/my-skills.scss';
 // Source for icons: https://devicon.dev
 // Github link: https://github.com/devicons/devicon
 
@@ -12,16 +12,17 @@ const plain_icon_link = (file) => {
 }
 
 class Skill {
-    constructor(skill,need_plain) {
+    constructor(skill, need_plain) {
         this.skill = skill;
         this.icon = need_plain ? plain_icon_link(skill) : icon_link(skill);
         return (
-            <p className="skill-icon">
+            <p className="skill">
                 <img src={this.icon}
                     width="50px"
                     alt={this.skill + "-icon"}
                 />
-                {this.skill}!
+                <br />
+                {this.skill.toUpperCase()}
             </p>
         );
 
@@ -39,37 +40,46 @@ class MySkills extends React.Component {
         // }
 
         return (
-            <div className="my-skills" id="skills">
+            <div className="skills" id="skills">
                 <h1 className="section-title">~ Skills ~</h1>
-                {new Skill("c")}
-                {new Skill("cplusplus")}
-                {new Skill("java")}
-                
-                {new Skill("python")}
-                {new Skill("numpy")}
-                
-                {new Skill("html5")}
-                {new Skill("css3")}
-                {new Skill ("sass")}
-                {new Skill("markdown")}
-                {new Skill("javascript")}
-                {new Skill("react")}
+                {/* the skills-grid contains 3 sections of skills */}
+                <div className="skills-grid">
 
-                {new Skill("nodejs")}
-                {/* Need to get plain icon instead */}
+                    {/* Section 1: Programming */}
+                    <section className="programming">
+                        <h4 className="section-title">Programming</h4>
+                        {new Skill("c")}
+                        {new Skill("cplusplus")}
+                        {new Skill("java")}
+                        {new Skill("python")}
+                    </section>
 
-                {new Skill("vscode")}
-                {new Skill("vim")}
-                {new Skill("bash")}
-                {new Skill("linux")}
-                {new Skill("ubuntu",true)}
-                {new Skill("aarch64")}
-                {new Skill("arduino")}
-                {new Skill("raspberrypi")}
-                
-                {new Skill("git")}
-                {new Skill("github")}
-                {new Skill("illustrator",true)}
+                    {/* Section 2: Web development */}
+                    <section className="web-development">
+                        <h4 className="section-title">Web development</h4>
+                        {new Skill("html5")}
+                        {new Skill("css3")}
+                        {new Skill("sass")}
+                        {new Skill("markdown")}
+                        {new Skill("javascript")}
+                        {new Skill("react")}
+                        {new Skill("nodejs")}
+                    </section>
+                    {/* Section 3: System */}
+                    <section className="system">
+                        <h4 className="section-title">System</h4>
+
+                        {new Skill("git")}
+                        {new Skill("github")}
+                        {new Skill("bash")}
+                        {new Skill("linux")}
+                        {new Skill("ubuntu", true)}
+                        {new Skill("aarch64")}
+                        {new Skill("raspberrypi")}
+                        {new Skill("arduino")}
+                    </section>
+                    {/* Section 4: Design (might not include) */}
+                </div>
             </div>
         );
     }
