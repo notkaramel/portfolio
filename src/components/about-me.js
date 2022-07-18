@@ -46,7 +46,7 @@ const AboutMe = () => {
                     <p>👋 Hi! I'm Antoine Phan.</p>
                     <p> 🎓 U1 Electrical Engineering @ McGill University </p>
                     <p> 📍 Montreal, Canada.</p>
-                    <p> 📈 CGPA: 3.52</p>
+                    {/* <p> 📈 CGPA: 3.52</p> */}
                     <p> 🌐 Languages: English, French, Vietnamese, Spanish</p>                    {social_media()}
                 </div>
             </div>
