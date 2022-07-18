@@ -1,19 +1,43 @@
 @import './color-palette.sass';
 
+// Small screen navbar
+@media screen and (max-width: 600px) {
+    .navbar {
+        left: 0;
+            bottom: 0;
+            height: max-content;
+            width: 100vw;
+        }
+    .navbar-list{
+        flex-direction: row;
+    }
+}
+
+// Large screen navbar
+@media screen and (min-width: 600px) {
+    .navbar {
+        left: 0;
+        top: 0;
+        width: 4rem;
+        height: 100vh;
+    }
+
+    .navbar-list{
+        flex-direction: column;
+    }
+}
+
+// General settings
 .navbar {
-    left: 0;
-    top: 0;
-    width: 4rem;
-    height: 100vh;
     position: fixed;
     background-color: $pastel-mint;
 
     .navbar-list {
         margin: 0;
         padding: 0;
-        list-style: none;
+        
         display: flex;
-        flex-direction: column;
+        list-style: none;
         align-items: center;
         justify-content: center;
     }
@@ -26,13 +50,13 @@
             text-align: center;
             font-size: 1.5rem;
             font-weight: bold;
-            
+
             color: black;
             padding: 1rem;
             display: block;
             transition: all 300ms ease-out;
         }
-        
+
         svg {
             width: 1.5rem;
             height: 1.5rem;
@@ -45,9 +69,9 @@
             filter: invert(100%);
         }
 
-        a:active{
+        a:active {
             background-color: rgba(180, 180, 64, 0.521);
         }
-        
+
     }
 }
