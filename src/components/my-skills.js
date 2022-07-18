@@ -57,13 +57,13 @@ class MySkills extends React.Component {
                     {/* Section 2: Web development */}
                     <section className="web-development">
                         <h4 className="section-title">Web development</h4>
-                        {new Skill("html5")}
-                        {new Skill("css3")}
-                        {new Skill("sass")}
-                        {new Skill("markdown")}
                         {new Skill("javascript")}
                         {new Skill("react")}
                         {new Skill("nodejs")}
+                        {new Skill("sass")}
+                        {new Skill("html5")}
+                        {new Skill("css3")}
+                        {new Skill("markdown")}
                     </section>
                     {/* Section 3: System */}
                     <section className="system">
@@ -74,7 +74,6 @@ class MySkills extends React.Component {
                         {new Skill("bash")}
                         {new Skill("linux")}
                         {new Skill("ubuntu", true)}
-                        {new Skill("aarch64")}
                         {new Skill("raspberrypi")}
                         {new Skill("arduino")}
                     </section>
