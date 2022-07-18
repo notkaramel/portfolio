@@ -43,7 +43,7 @@ class Project {
         // console.log(project_id);
         
         return (
-            <div className="project-grid-item" id={project_id}>
+            <div className="project-flex-item" id={project_id}>
                 <p className="project-title">{this.name}</p>
                 <p className="project-post">{this.post}</p>
                 <p className="links">
@@ -95,11 +95,11 @@ class MyProjects extends React.Component {
                 
                 {/* The project-grid the container of all the projects.
                 All projects within this sections are grid items. */}
-                <section className="project-grid">
+                <section className="project-flex">
                     {Portfolio.createPost()}
                     {JavaCalculator.createPost()}
                     {WordleHelper.createPost()}
-                    {WebTutor.createPost()}
+                    {/* {WebTutor.createPost()} */}
                     {ChordProgressionBuilder.createPost()}
                 </section>
             </div>
