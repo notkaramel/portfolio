@@ -2,7 +2,9 @@
 
 // Container of section title and all projects
 .projects {
-    display: grid;
+    display: flexbox;
+    flex-direction: row;
+    //height: 100vh;
     // Section title
     .section-title {
         h2 {
@@ -24,7 +26,6 @@
         grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
         
         font-size: 1.5rem;
-        //transition: all 600ms;
         //box-shadow: rgba(37, 7, 77, 0.521) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
         height: 100%;
         border-radius: 0.4rem;
@@ -32,8 +33,8 @@
 
         // Grid items (Projects themselves)
         .project-grid-item {
-            width: 20rem;
-            height: 20rem;
+            width: 16rem;
+            height: 16rem;
             text-align: center;
 
             // Make Projects's post look cool with shadow

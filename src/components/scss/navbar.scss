@@ -34,14 +34,15 @@
         
 
         a:hover {
-            color: rgb(23, 29, 119);
-            background-color: rgba(99, 109, 245, 0.493);
+            background-color: rgba(133, 102, 125, 0.39);
+                            filter: invert(100%);
         }
 
         svg {
             width: 1.5rem;
             height: 1.5rem;
-            margin-right: 0.5rem;
+            display: block;
+            margin: auto;
         }
 
         ul:last-child {

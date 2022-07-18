@@ -38,27 +38,28 @@ const AboutMe = () => {
     return (
         <div className="about-me" id="about-me">
             <h1 className="section-title">~ About Me ~</h1>
-            <table className="info-table">
-                <tbody>
+            <div className="about-me-box">
+                <div>
                     {/* The profile picture spans 2 rows of the table */}
-                    <tr>
-                        <td className="profile-pic" rowSpan={"2"}>
+                    <div>
+                        <section className="about-me-box-item">
                             <img
+                                id="profile-picture"
                                 src="https://avatars.githubusercontent.com/u/24505220?v=4"
                                 alt="profile_pic">
                             </img>
-                        </td>
-                        <td className="info">
+                        </section>
+                        <section className="about-me-box-item" id="my-info">
                             {greeting}
                             {education}
                             {location}
                             {cgpa}
                             {languages}
                             {social_media()}
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+                        </section>
+                    </div>
+                </div>
+            </div>
         </div>
     );
 }
