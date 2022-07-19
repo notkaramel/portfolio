@@ -17,14 +17,10 @@ class Skill {
         this.icon = need_plain ? plain_icon_link(skill) : icon_link(skill);
         return (
             // skill = skill-flex-flex-item
-            <p className="skill">
                 <img src={this.icon}
-                    width="50px"
                     alt={this.skill + "-icon"}
+                    className="skill"
                 />
-                <br />
-                {this.skill.toUpperCase()}
-            </p>
         );
 
     }
@@ -62,11 +58,12 @@ class MySkills extends React.Component {
                         <p className="skills-flex-item-title">Web development</p>
                         <div className="skills-flex-flex">
                             {new Skill("javascript")}
-                            {new Skill("react")}
-                            {/* {new Skill("nodejs")} */}
-                            {new Skill("sass")}
                             {new Skill("html5")}
                             {new Skill("css3")}
+                            {new Skill("react")}
+                            {new Skill("nodejs")}
+                            {new Skill("sass")}
+                            {new Skill("django",true)}
                             {new Skill("markdown")}
                         </div>
                     </div>

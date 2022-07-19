@@ -21,7 +21,7 @@
         background: $pastel-mint;
         padding: 2rem 1rem;
         height: max-content;
-        box-shadow: rgba(37, 7, 77, 0.521) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
+        box-shadow: $box-shadow-bold;
         margin-bottom: 1rem;
         border-radius: 0.4rem;
         overflow: hidden;
@@ -38,8 +38,11 @@
             // Make Projects's post look cool with shadow
             border-radius: 0.5em;
             background-color: white;
-            box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.2);
-
+            box-shadow: $box-shadow;
+            &:hover {
+                box-shadow: $box-shadow-hover;
+                transition: all 0.2s ease-in-out;
+            }
             p{
                 padding: 0 10% 0 10%;
             }

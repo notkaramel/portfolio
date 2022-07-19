@@ -11,7 +11,7 @@
         color: $dark-mint;
     }
 
-    // Skills container
+    // Skills .container
     .skills-flex {
         display: flex;
         flex-direction: row;
@@ -21,20 +21,23 @@
         background: $pastel-mint;
         //padding: 2rem 1rem;
         height: max-content;
-        box-shadow: rgba(37, 7, 77, 0.521) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
+        box-shadow: $box-shadow-bold;
         margin-bottom: 1rem;
         border-radius: 0.4rem;
         overflow: hidden;
         row-gap: 2rem;
+        padding: 1rem 0;
         .skills-flex-item{
             min-width: 25rem;
             max-width: 27rem;
+            
         }
         
         .skills-flex-item-title {
             //color: pink;
             text-align: center;
-            font-size: 2.4rem;
+            color:rgb(12, 44, 48);
+            font-size: 2rem;
             font-weight: 700;
             margin: 1rem;
             padding: 1rem;
@@ -52,17 +55,22 @@
             height: max-content;
             box-shadow: rgba(37, 7, 77, 0.521) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
             margin: 1rem;
-            border-radius: 0.4rem;
+            border-radius: 1rem;
             overflow: hidden;
-            
+            &:hover {
+                    box-shadow: $box-shadow-hover;
+                    transition: all 0.2s ease-in-out;
+                }
 
             // skill-flex-flex-item
             .skill{
                 align-self: flex-end;
-                height: 5rem;
-                width: 5rem;
+                height: 4rem;
+                width: 4rem;
                 text-align: center;
                 margin: 1rem;
+                padding: 0.3rem;
+                
                 //border: 0.1rem solid $dark-mint;
             }
         }

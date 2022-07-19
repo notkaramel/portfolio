@@ -1,0 +1,66 @@
+@import './color-palette.sass'
+
+nav
+    width: 5rem
+    height: 100vh
+    position: fixed
+    background-color: $dark-mint
+    top: 0
+    left: 0
+    ul
+        list-style: none
+        padding: 0
+        margin: 0
+        display: flex
+        flex-direction: column
+        align-items: center
+        //justify-content: center
+        height: 100%
+        
+        li
+            width: 100%
+            border: 0 1rem solid transparent
+            &:last-child
+                margin-top: auto
+
+            a
+                display: flex
+                align-items: center
+                height: 5rem
+                width: max-content
+                color: white
+                text-decoration: none
+                font-weight: bold
+                span
+                    color: $turned-off
+                    display: none
+                    margin-left: 1rem
+                svg
+                    fill: $turned-off
+                    min-width: 2rem
+                    max-height: 2.1rem
+                    margin: 1.5rem 1.5rem
+        
+                
+    transition: width 300ms ease-in-out
+    &:hover
+        background-color: $dark-mint
+        width: 16rem
+        span, svg
+            transition: all 500ms ease-in-out
+        span
+            display: block
+            color: $turned-on
+            font-size: 1.5rem 
+        svg
+            fill: $turned-on
+        li
+            border-radius: 1rem
+            &:hover
+                border: 0 1rem solid $turned-off
+                box-shadow: $box-shadow-bold
+                transition: all 200ms ease-in-out
+
+        
+
+        

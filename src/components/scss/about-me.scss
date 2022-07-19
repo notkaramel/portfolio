@@ -10,22 +10,18 @@
         text-align: center;
         color: $dark-mint;
     }
-
-    color: black;
-    // margin-left: 10%;
-    // margin-right: 10%;
-    // padding-bottom: 100px;
-    transition: all 0.1s;
 }
 
 // Flex container
 .about-me-flex {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
+    column-gap: 5%;
     align-items: center;
     flex-wrap: wrap;
     height: max-content;
+
     // Flex items by their id
     #profile-picture {
         $profile-scale : 20rem;
@@ -35,7 +31,14 @@
         border-radius: 50%;
         border: 1rem ridge $pastel-mint;
         margin: 1rem;
-        box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.2);
+        box-shadow: $box-shadow;
+
+        &:hover {
+            border-radius: 0%;
+            border: 1rem ridge $pastel-mint;
+            transition: all 0.5s ease-in-out;
+            box-shadow: $box-shadow-hover;
+        }
     }
 
     #my-info {
@@ -44,18 +47,23 @@
             font-size: 1.2rem;
             border-radius: 1rem;
             border: 2px solid $pastel-mint;
-        }
 
-        .social-media {
-            text-align: center;
-
-            svg {
-                text-align: center;
-                width: 2rem;
-                padding: 0 1rem 0 1rem;
-                vertical-align: middle;
+            &:hover {
+                box-shadow: $box-shadow-hover;
+                transition: all 0.2s ease-in-out;
             }
-
         }
+    }
+
+    .social-media {
+        text-align: center;
+
+        svg {
+            text-align: center;
+            width: 2rem;
+            padding: 0 1rem 0 1rem;
+            vertical-align: middle;
+        }
+
     }
 }

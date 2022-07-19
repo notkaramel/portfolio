@@ -1,6 +1,6 @@
 import React from "react";
 
-class PastExperience extends React.Component {
+class WorkExperience extends React.Component {
     render() {
         return (
             <div className="past-exp" id="experience">
@@ -10,4 +10,4 @@ class PastExperience extends React.Component {
     }
 }
 
-export default PastExperience;
+export default WorkExperience;
