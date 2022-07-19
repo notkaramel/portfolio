@@ -3,16 +3,12 @@
 // Container of section title and all projects
 .projects {
     height: max-content;
-    display: flexbox;
-    flex-direction: row;
-    //height: 100vh;
-    // Section title
+    
     .section-title {
-        h2 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 2rem;
-        }
+        font-size: 2.5rem;
+        font-weight: bold;
+        text-align: center;
+        color: $dark-mint;
     }
     
     // Projects container
@@ -24,7 +20,6 @@
         align-items: flex-start;
         background: $pastel-mint;
         padding: 2rem 1rem;
-        //margin: 0;
         height: max-content;
         box-shadow: rgba(37, 7, 77, 0.521) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
         margin-bottom: 1rem;
@@ -33,7 +28,7 @@
 
         // Grid items (Projects themselves)
         .project-flex-item {
-            width: 16rem;
+            width: 24rem;
             height: max-content;
             min-height: 16rem;
             text-align: center;

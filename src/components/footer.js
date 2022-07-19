@@ -1,4 +1,5 @@
 import React from "react";
+import './scss/footer.scss'
 
 class Footer extends React.Component {
     render() {
@@ -10,7 +11,7 @@ class Footer extends React.Component {
                     <p>Source for svg icons: <a href="https://fontawesome.com" target={"_blank"} rel={"noreferrer"}>fontawesome.com</a></p>
                 </div>
                 <div className="copyrights" id="copyrights">
-                    <h4>COPYRIGHTS (c) Antoine Phan 2022</h4>
+                    <p>COPYRIGHTS (c) Antoine Phan 2022</p>
                 </div>
             </div>
         );

@@ -16,6 +16,7 @@ class Skill {
         this.skill = skill;
         this.icon = need_plain ? plain_icon_link(skill) : icon_link(skill);
         return (
+            // skill = skill-flex-flex-item
             <p className="skill">
                 <img src={this.icon}
                     width="50px"
@@ -42,41 +43,46 @@ class MySkills extends React.Component {
         return (
             <div className="skills" id="skills">
                 <h1 className="section-title">~ Skills ~</h1>
-                {/* the skills-grid contains 3 sections of skills */}
-                <div className="skills-grid">
-
+                {/* the skills-flex contains 3 sections of skills-flex-flex */}
+                <div className="skills-flex">
                     {/* Section 1: Programming */}
-                    <section className="programming">
-                        <h4 className="section-title">Programming</h4>
-                        {new Skill("c")}
-                        {new Skill("cplusplus")}
-                        {new Skill("java")}
-                        {new Skill("python")}
-                    </section>
-
+                    <div className="skills-flex-item">
+                        <p className="skills-flex-item-title">Programming</p>
+                        <div className="skills-flex-flex">
+                            {new Skill("c")}
+                            {new Skill("cplusplus")}
+                            {new Skill("java")}
+                            {new Skill("csharp")}
+                            {new Skill("python")}
+                            {new Skill("numpy")}
+                        </div>
+                    </div>
                     {/* Section 2: Web development */}
-                    <section className="web-development">
-                        <h4 className="section-title">Web development</h4>
-                        {new Skill("javascript")}
-                        {new Skill("react")}
-                        {new Skill("nodejs")}
-                        {new Skill("sass")}
-                        {new Skill("html5")}
-                        {new Skill("css3")}
-                        {new Skill("markdown")}
-                    </section>
+                    <div className="skills-flex-item">
+                        <p className="skills-flex-item-title">Web development</p>
+                        <div className="skills-flex-flex">
+                            {new Skill("javascript")}
+                            {new Skill("react")}
+                            {/* {new Skill("nodejs")} */}
+                            {new Skill("sass")}
+                            {new Skill("html5")}
+                            {new Skill("css3")}
+                            {new Skill("markdown")}
+                        </div>
+                    </div>
                     {/* Section 3: System */}
-                    <section className="system">
-                        <h4 className="section-title">System</h4>
-
-                        {new Skill("git")}
-                        {new Skill("github")}
-                        {new Skill("bash")}
-                        {new Skill("linux")}
-                        {new Skill("ubuntu", true)}
-                        {new Skill("raspberrypi")}
-                        {new Skill("arduino")}
-                    </section>
+                    <div className="skills-flex-item">
+                        <p className="skills-flex-item-title">System</p>
+                        <div className="skills-flex-flex">
+                            {new Skill("git")}
+                            {/* {new Skill("github")} */}
+                            {new Skill("bash")}
+                            {new Skill("linux")}
+                            {new Skill("ubuntu", true)}
+                            {new Skill("raspberrypi")}
+                            {new Skill("arduino")}
+                        </div>
+                    </div>
                     {/* Section 4: Design (might not include) */}
                 </div>
             </div>
