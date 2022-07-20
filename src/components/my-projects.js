@@ -27,7 +27,7 @@ class MyProjects extends React.Component {
 
         return (
             <div className="projects" id="projects">
-                <h1 className="section-title">~ Projects ~</h1>
+                <h1 className="section-title">Projects</h1>
 
                 {/* The project-grid the container of all the projects.
                 All projects within this sections are grid items. */}

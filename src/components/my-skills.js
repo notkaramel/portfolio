@@ -38,7 +38,7 @@ class MySkills extends React.Component {
 
         return (
             <div className="skills" id="skills">
-                <h1 className="section-title">~ Skills ~</h1>
+                <h1 className="section-title">Skills</h1>
                 {/* the skills-flex contains 3 sections of skills-flex-flex */}
                 <div className="skills-flex">
                     {/* Section 1: Programming */}

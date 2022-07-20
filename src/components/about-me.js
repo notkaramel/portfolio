@@ -20,11 +20,9 @@ const social_media = () => {
 
     return (
         <div className="social-media">
-            <p>
                 {github}
                 {linkedin}
                 {email}
-            </p>
         </div>
     );
 }
@@ -33,7 +31,7 @@ const AboutMe = () => {
 
     return (
         <div className="about-me" id="about-me">
-            <h1 className="section-title" id="title">~ About Me ~</h1>
+            <h1 className="section-title" id="title">About Me</h1>
             {/* Use a flexbox */}
             <div className="about-me-flex">
                 <img
@@ -42,12 +40,15 @@ const AboutMe = () => {
                     src="https://avatars.githubusercontent.com/u/24505220?v=4"
                     alt="profile_pic">
                 </img>
-                <div className="about-me-flex-item" id="my-info">
-                    <p>👋 Hi! I'm Antoine Phan.</p>
-                    <p> 🎓 U1 Electrical Engineering @ McGill University </p>
-                    <p> 📍 Montreal, Canada.</p>
+                <div className="about-me-flex-item">
+                    <p id="my-info">👋 Hi! I'm Antoine Phan.</p>
+                    <p id="my-info"> 🎓 U1 Electrical Engineering @ McGill University </p>
+                    <p id="my-info"> 📍 Montreal, Canada.</p>
                     {/* <p> 📈 CGPA: 3.52</p> */}
-                    <p> 🌐 Languages: English, French, Vietnamese, Spanish</p>                    {social_media()}
+                    <p id="my-info"> 🌐 Languages: English, French, Vietnamese, Spanish
+                        <span className="extra-info">Native</span>
+                    </p>
+                    <p> {social_media()} </p>
                 </div>
             </div>
         </div>

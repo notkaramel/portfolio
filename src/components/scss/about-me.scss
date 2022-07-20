@@ -1,4 +1,5 @@
 @import './variables.sass';
+
 .about-me {
     height: max-content;
     width: 100%;
@@ -20,7 +21,7 @@
     align-items: center;
     flex-wrap: wrap;
     height: max-content;
-
+    
     // Flex items by their id
     #profile-picture {
         $profile-scale : 20rem;
@@ -41,18 +42,30 @@
     }
 
     #my-info {
-        p {
-            padding: 0.7rem;
-            font-size: 1.2rem;
-            border-radius: 1rem;
-            border: 2px solid $pastel-mint;
+        padding: 0.7rem;
+        font-size: 1.2rem;
+        border-radius: 1rem;
+        border: 2px solid $pastel-mint;
+        transition: height 300ms cubic-bezier(0.39, 0.575, 0.565, 1);
 
-            &:hover {
-                box-shadow: $box-shadow-hover;
-                transition: all 0.2s ease-in-out;
+        .extra-info {
+            display: none;
+            font-size: 1.2rem;
+            list-style: none;
+        }
+        &:hover{
+            height: max-content;
+            box-shadow: $box-shadow-hover;
+
+            .extra-info {
+                display: contents;
+                font-size: 1.2rem;
+                border-radius: 1rem;
+                border: 2px solid $pastel-mint;
             }
         }
     }
+
 
     .social-media {
         text-align: center;
