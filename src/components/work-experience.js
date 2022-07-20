@@ -17,7 +17,7 @@ export default function Experience() {
                 </div>
                 <div className="container-flex">
                     <p className="container-flex-title">
-                        Hackathon Code.Jam(XI)
+                        
                     </p>
                 </div>
             </div>
