@@ -1,5 +1,4 @@
-@import '/src/components/scss/color-palette.sass';
-
+@import '/src/components/scss/variables.sass';
 :root {
   font-size: 16px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -11,13 +10,13 @@
 }
 
 // margin settings for small screens
-@media screen and (max-width: 600px) {
+@media screen and (max-width: $screen-small) {
   body {
     margin: 0 1rem 5rem 1rem;
   }
 }
 // margin settings for big screens
-@media screen and (min-width: 600px) {
+@media screen and (min-width: $screen-small) {
   body {
     margin: 0 1rem 0 6rem;
   }

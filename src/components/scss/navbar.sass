@@ -1,34 +1,25 @@
-@import './color-palette.sass'
+@import './variables.sass'
 
 nav
-    width: 5rem
-    height: 100vh
     position: fixed
-    background-color: $dark-mint
-    top: 0
     left: 0
+    background-color: $dark-mint
     ul
         list-style: none
         padding: 0
         margin: 0
         display: flex
-        flex-direction: column
         align-items: center
         //justify-content: center
         height: 100%
         
         li
             width: 100%
-            border-top: 0.3rem solid transparent
-            border-bottom: 0.3rem solid transparent
-            &:last-child
-                margin-top: auto
-
+            
             a
                 display: flex
                 align-items: center
                 height: 5rem
-                width: max-content
                 color: white
                 text-decoration: none
                 font-weight: bold
@@ -36,31 +27,70 @@ nav
                     color: $turned-off
                     display: none
                     margin-left: 1rem
+                    white-space: nowrap
                 svg
                     fill: $turned-off
                     min-width: 2rem
                     max-height: 2.1rem
                     margin: 1.5rem 1.5rem
         
-                
-    transition: width 300ms ease-in-out
-    &:hover
-        background-color: $dark-mint
-        width: 16rem
-        span, svg
-            transition: all 500ms ease-in-out
-        span
-            display: block
-            color: $turned-on
-            font-size: 1.5rem 
-        svg
-            fill: $turned-on
-        li
-            border-radius: 1rem
-            &:hover
-                box-shadow: $box-shadow-bold
+    // Big screen
+    @media (min-width: $screen-small)
+        width: 5rem
+        height: 100vh
+        top: 0
+        ul
+            flex-direction: column
+            li
+                border-top: 0.3rem solid transparent
+                border-bottom: 0.3rem solid transparent
+                &:last-child
+                    margin-top: auto
+                a
+                    width: max-width
+
+        &:hover
+            width: 16rem
+            span, svg
+                transition: all 500ms ease-in-out
+            span
+                display: block
+                color: $turned-on
+                font-size: 1.5rem 
+            svg
+                fill: $turned-on
+            li
+                border-radius: 1rem
+                &:hover
+                    box-shadow: $box-shadow-bold
+                    transition: all 200ms ease-in-out
+
+        transition: width 300ms ease-in-out
+        
+    // Small screen
+    @media (max-width: $screen-small)
+        height: 5rem
+        width: 100vw
+        bottom: 0
+        ul
+            flex-direction: row
+            justify-content: space-evenly
+            li
+                border-left: 0.01rem solid transparent
+                border-right: 0.01rem solid transparent
+                border-radius: 1rem
+               
+                a
+                    justify-content: center
+                    width: 100%
+                &:hover
+                    box-shadow: $box-shadow-bold
+                    svg
+                        fill: $turned-on  
+        
+            li, svg
                 transition: all 200ms ease-in-out
+                   
 
-        
 
-        
+
