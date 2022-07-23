@@ -1,5 +1,4 @@
 import React from "react";
-import './scss/my-skills.scss';
 // Source for icons: https://devicon.dev
 // Github link: https://github.com/devicons/devicon
 
@@ -51,6 +50,7 @@ class MySkills extends React.Component {
                             {new Skill("csharp")}
                             {new Skill("python")}
                             {new Skill("numpy")}
+                            {new Skill("julia")}
                         </div>
                     </div>
                     {/* Section 2: Web development */}
@@ -62,6 +62,8 @@ class MySkills extends React.Component {
                             {new Skill("css3")}
                             {new Skill("react")}
                             {new Skill("nodejs")}
+                            {new Skill("express")}
+                            {new Skill("typescript")}
                             {new Skill("sass")}
                             {new Skill("django",true)}
                             {new Skill("markdown")}

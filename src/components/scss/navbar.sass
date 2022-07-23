@@ -1,4 +1,5 @@
 @import './variables.sass'
+$screen-breakpoint: $screen-small
 
 nav
     position: fixed
@@ -35,7 +36,7 @@ nav
                     margin: 1.5rem 1.5rem
         
     // Big screen
-    @media (min-width: $screen-small)
+    @media (min-width: $screen-breakpoint)
         width: 5rem
         height: 100vh
         top: 0
@@ -68,7 +69,7 @@ nav
         transition: width 300ms ease-in-out
         
     // Small screen
-    @media (max-width: $screen-xsmall)
+    @media (max-width: $screen-breakpoint)
         height: 5rem
         width: 100vw
         bottom: 0

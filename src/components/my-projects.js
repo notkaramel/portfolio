@@ -1,8 +1,7 @@
 import React from "react";
-import './scss/my-projects.scss';
-
-const github_icon = "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg";
-const linkto_icon = require('./icons/exit-top-right.png');
+import { github_icon, linkto_icon } from "./icons/icons";
+// const github_icon = "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg";
+// const linkto_icon = require('./icons/exit-top-right.png');
 
 class MyProjects extends React.Component {
     render() {
@@ -35,8 +34,7 @@ class MyProjects extends React.Component {
                     {Portfolio.createPost()}
                     {JavaCalculator.createPost()}
                     {WordleHelper.createPost()}
-                    {/* {WebTutor.createPost()} */}
-                    {ChordProgressionBuilder.createPost()}
+                    {/* {ChordProgressionBuilder.createPost()} */}
                 </section>
             </div>
         );
@@ -65,11 +63,8 @@ class Project {
             let linktoproj = (
                 <a href={this.link}
                     rel="noreferrer"
-                    target="_blank"
-                >
-                    <img src={linkto_icon}
-                        alt={this.link}
-                        width="30px" />
+                    target="_blank">
+                    {linkto_icon}
                 </a>
             )
             return linktoproj;
@@ -84,18 +79,15 @@ class Project {
             <div className="project-flex-item" id={project_id}>
                 <p className="project-title">{this.name}</p>
                 <p className="project-post">{this.post}</p>
-                <p className="links">
+                <p className="project-link">
                     <span className="github-link">
                         <a href={this.github}
                             target="_blank"
                             rel="noreferrer"
                             title={this.name}>
-                            <img src={github_icon}
-                                alt="github_link"
-                                width="30px"></img>
+                            {github_icon}
                         </a>
                     </span>
-                    &nbsp;
                     <span className="link-to-project" id={this.name + "-link"}>
                         {this.showLink()}
                     </span>

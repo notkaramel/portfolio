@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.scss';
+import './components/scss/styles.scss';
 import reportWebVitals from './reportWebVitals';
 import NavBar from './components/navbar';
 import AboutMe from './components/about-me';
