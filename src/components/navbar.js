@@ -32,15 +32,10 @@ const NavBar = () => {
                         {span("Skills")}
                     </a>
                 </li>
-                <li className="navbar-item">
+                {/* <li className="navbar-item">
                     <a href="#experience" className="nav-link">
                         {experience_icon}
                         {span("Experience")}
-                    </a>
-                </li>
-                {/* <li className="navbar-item">
-                    <a href="#citations">
-                        {citations_icon}
                     </a>
                 </li> */}
                 <li className="navbar-item">

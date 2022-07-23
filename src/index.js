@@ -25,7 +25,7 @@ content.render(
     <AboutMe />
     <MyProjects />
     <MySkills />
-    <Experience />
+    {/* <Experience /> */}
   </React.StrictMode>
 );
 

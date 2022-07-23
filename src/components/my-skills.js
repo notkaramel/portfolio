@@ -49,27 +49,10 @@ class MySkills extends React.Component {
                             {new Skill("java")}
                             {new Skill("csharp")}
                             {new Skill("python")}
-                            {new Skill("numpy")}
                             {new Skill("julia")}
                         </div>
                     </div>
-                    {/* Section 2: Web development */}
-                    <div className="skills-flex-item">
-                        <p className="skills-flex-item-title">Web development</p>
-                        <div className="skills-flex-flex">
-                            {new Skill("javascript")}
-                            {new Skill("html5")}
-                            {new Skill("css3")}
-                            {new Skill("react")}
-                            {new Skill("nodejs")}
-                            {new Skill("express")}
-                            {new Skill("typescript")}
-                            {new Skill("sass")}
-                            {new Skill("django",true)}
-                            {new Skill("markdown")}
-                        </div>
-                    </div>
-                    {/* Section 3: System */}
+                    {/* Section 2: System */}
                     <div className="skills-flex-item">
                         <p className="skills-flex-item-title">System</p>
                         <div className="skills-flex-flex">
@@ -80,6 +63,22 @@ class MySkills extends React.Component {
                             {new Skill("ubuntu", true)}
                             {new Skill("raspberrypi")}
                             {new Skill("arduino")}
+                        </div>
+                    </div>
+                    {/* Section 3: Web development */}
+                    <div className="skills-flex-item" id="webdev">
+                        <p className="skills-flex-item-title">Web development</p>
+                        <div className="skills-flex-flex">
+                            {new Skill("javascript")}
+                            {new Skill("typescript")}
+                            {new Skill("html5")}
+                            {new Skill("css3")}
+                            {new Skill("react")}
+                            {new Skill("nodejs")}
+                            {new Skill("express")}
+                            {new Skill("sass")}
+                            {new Skill("django",true)}
+                            {new Skill("markdown")}
                         </div>
                     </div>
                     {/* Section 4: Design (might not include) */}

@@ -1,63 +1,72 @@
 @import '/src/components/scss/variables.sass';
+
 :root {
-  font-size: 16px;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	font-size: 16px;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+		'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+		sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 
 }
 
 // margin settings for small screens
 @media screen and (max-width: $screen-small) {
-  body {
-    margin: 0 1rem 5rem 1rem;
-  }
+	body {
+		margin: 0 1rem 5rem 1rem;
+	}
 }
+
 // margin settings for big screens
 @media screen and (min-width: $screen-small) {
-  body {
-    margin: 0 1rem 0 6rem;
-  }
+	body {
+		margin: 0 1rem 0 6rem;
+	}
 }
 
 
 body {
-  color: black;
-  background-color: white;
-  padding: 0;
+	color: black;
+	background-color: white;
+	padding: 0;
 
-  // Make scrollbar look cool
-  &::-webkit-scrollbar {
-    width: 7px;
-    background: transparent;
-  }
+	// Make scrollbar look cool
+	&::-webkit-scrollbar {
+		width: 7px;
+		background: transparent;
+	}
 
-  &::-webkit-scrollbar-track {
-    background: $transparent-mint;
-  }
+	&::-webkit-scrollbar-track {
+		background: $transparent-mint;
+	}
 
-  &::-webkit-scrollbar-thumb {
-    background: $dark-mint;
-  }
+	&::-webkit-scrollbar-thumb {
+		background: $dark-mint;
+	}
 
-  &::-webkit-scrollbar-thumb:hover {
-    background: $light-mint;
-  }
+	&::-webkit-scrollbar-thumb:hover {
+		background: $light-mint;
+	}
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	#content{
+		width: 80vw;
+	}
 }
 
 .section-title {
-  padding: 2rem 1rem;
-  margin: 0 1rem;
-  text-align: center;
+	padding: 2rem 1rem;
+	margin: 0 1rem;
+	text-align: center;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+		monospace;
 }
 
 html {
-  scroll-behavior: smooth;
+	scroll-behavior: smooth;
 }
