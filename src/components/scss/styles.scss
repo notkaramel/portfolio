@@ -198,13 +198,13 @@
         padding: 1rem 0;
 
         .skills-flex-item {
-            max-width: 27rem;
+            max-width: max-content;
             align-items: center;
         }
-
-        #webdev {
-            max-width: 40rem;
-        }
+        
+        // #webdev {
+        //     max-width: 27rem;
+        // }
 
         .skills-flex-item-title {
             color: pink;

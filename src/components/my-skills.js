@@ -47,9 +47,7 @@ class MySkills extends React.Component {
                             {new Skill("c")}
                             {new Skill("cplusplus")}
                             {new Skill("java")}
-                            {new Skill("csharp")}
                             {new Skill("python")}
-                            {new Skill("julia")}
                         </div>
                     </div>
                     {/* Section 2: System */}
@@ -75,9 +73,7 @@ class MySkills extends React.Component {
                             {new Skill("css3")}
                             {new Skill("react")}
                             {new Skill("nodejs")}
-                            {new Skill("express")}
                             {new Skill("sass")}
-                            {new Skill("django",true)}
                             {new Skill("markdown")}
                         </div>
                     </div>

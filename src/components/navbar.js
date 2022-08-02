@@ -38,12 +38,12 @@ const NavBar = () => {
                         {span("Experience")}
                     </a>
                 </li> */}
-                <li className="navbar-item">
+                {/* <li className="navbar-item">
                     <a href="#darkmode">
                         {darkmode_icon}
                         {span("Darkmode")}
                     </a>
-                </li>
+                </li> */}
             </ul>
         </nav>
     );
