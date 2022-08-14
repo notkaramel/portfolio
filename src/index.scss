@@ -17,10 +17,27 @@
 	}
 }
 
-// margin settings for big screens
+// margin settings for big PC screens
 @media screen and (min-width: $screen-small) {
 	body {
 		margin: 0 1rem 0 6rem;
+		// Make scrollbar look cool
+		&::-webkit-scrollbar {
+			width: 7px;
+			background: transparent;
+		}
+	
+		&::-webkit-scrollbar-track {
+			background: $transparent-mint;
+		}
+	
+		&::-webkit-scrollbar-thumb {
+			background: $dark-mint;
+		}
+	
+		&::-webkit-scrollbar-thumb:hover {
+			background: $light-mint;
+		}
 	}
 }
 
@@ -30,23 +47,6 @@ body {
 	background-color: white;
 	padding: 0;
 
-	// Make scrollbar look cool
-	&::-webkit-scrollbar {
-		width: 7px;
-		background: transparent;
-	}
-
-	&::-webkit-scrollbar-track {
-		background: $transparent-mint;
-	}
-
-	&::-webkit-scrollbar-thumb {
-		background: $dark-mint;
-	}
-
-	&::-webkit-scrollbar-thumb:hover {
-		background: $light-mint;
-	}
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
