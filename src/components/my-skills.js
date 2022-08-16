@@ -27,14 +27,6 @@ class Skill {
 
 class MySkills extends React.Component {
     render() {
-        // let skills_list = ["bash", "java", "linux"];
-        // let all_post = new Skill;
-        // let post = () => {
-        //     for (const myskill of skills_list) {
-        //         all_post.push(new Skill(myskill));
-        //     }
-        // }
-
         return (
             <div className="skills" id="skills">
                 <h1 className="section-title">Skills</h1>

@@ -1,5 +1,5 @@
 import React from "react";
-import { github_icon, linkedin_icon, email_icon } from "./icons/icons";
+import { github_icon, linkedin_icon, email_icon, mcgill_rouge } from "./icons/icons";
 
 const social_media = () => {
     const makeSocialMedia = (id, icon, url) => {
@@ -15,7 +15,7 @@ const social_media = () => {
     let email = makeSocialMedia("email", email_icon, "mailto:hoangtuan11102@gmail.com");
 
     return (
-        <div className="social-media">
+        <div className="about-me-grid-item" id="social-media">
             {github}
             {linkedin}
             {email}
@@ -24,39 +24,39 @@ const social_media = () => {
 }
 
 const AboutMe = () => {
-
     return (
         <div className="about-me" id="about-me">
             <h1 className="section-title" id="title">About Me</h1>
             {/* Use a flexbox */}
-            <div className="about-me-flex">
-                <img
-                    className="about-me-flex-item"
-                    id="profile-picture"
-                    src="https://avatars.githubusercontent.com/u/24505220?v=4"
-                    alt="profile_pic">
-                </img>
-                <div className="about-me-flex-item">
-                    <p id="my-info">👋 Hi! I'm Antoine Phan.</p>
-                    <p id="my-info"> 🎓 U1 Electrical Engineering @ McGill University </p>
-                    <p id="my-info"> 📍 Montreal, Canada.</p>
-                    {/* <p> 📈 CGPA: 3.52</p> */}
-                    <p id="my-info"> <span>🌐 Languages: </span>
-                        <span id="brief-info">
-                            English, French, Vietnamese, Spanish
-                        </span>
-                        <span id="extra-info">
-                            <ul>
-                                <li>English: Bilingual Proficiency</li>
-                                <li>French: Intermediate</li>
-                                <li>Vietnamese: Native</li>
-                                <li>Spanish: Newbie</li>
-                            </ul>
-                        </span>
-
-                    </p>
-                    <p> {social_media()} </p>
+            <div className="about-me-grid">
+                <div className="about-me-grid-item" id="name">
+                    <p>👋 Hi! I'm Antoine Phan.</p>
                 </div>
+                <div className="about-me-grid-item" id="education">
+                    <p>
+                        {mcgill_rouge} <br/>
+                        McGill University<br/>
+                        U1 Electrical Engineering
+                    </p>
+                </div>
+                <div className="about-me-grid-item" id="profile-picture">
+                    <img
+                        src="https://avatars.githubusercontent.com/u/24505220?v=4"
+                        alt="profile_pic">
+                    </img>
+                </div>
+
+                <div className="about-me-grid-item" id="languages">
+                    <p> 🌐 Languages 🌐
+                    <ul>
+                        <li>English: Bilingual</li>
+                        <li>French: Intermediate</li>
+                        <li>Vietnamese: Native</li>
+                        <li>Spanish: Basic</li>
+                    </ul>
+                    </p>
+                </div>
+                {social_media()}
             </div>
         </div>
     );

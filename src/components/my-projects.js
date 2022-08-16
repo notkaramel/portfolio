@@ -1,7 +1,5 @@
 import React from "react";
 import { github_icon, linkto_icon } from "./icons/icons";
-// const github_icon = "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg";
-// const linkto_icon = require('./icons/exit-top-right.png');
 
 class MyProjects extends React.Component {
     render() {
@@ -10,7 +8,7 @@ class MyProjects extends React.Component {
         WebTutor.writePost("A front-end website written in HTML and CSS, then deployed on Heroku.");
 
         let WordleHelper = new Project("Wordle Helper", "https://github.com/notkaramel/WordleHelper");
-        WordleHelper.writePost("A Chrome extension that helps you solve Wordle (hard mode enforced)");
+        WordleHelper.writePost("A Chrome extension that helps you solve Wordle puzzles.");
 
         let JavaCalculator = new Project("Java Calculator", "https://github.com/notkaramel/JavaCalculator");
         JavaCalculator.setLink("https://notkaramel.github.io/JavaCalculator/");
@@ -24,6 +22,10 @@ class MyProjects extends React.Component {
         let ChordProgressionBuilder = new Project("Chord Progression Builder", "https://github.com/notkaramel/ChordProgressionBuilder");
         ChordProgressionBuilder.writePost("An app that builds a chord progression based on your desired voice & progression.");
 
+        let ArchLinuxARM = new Project("ArchLinux on ARM", "https://github.com/notkaramel/ArchLinux-ARM-Installer");
+        ArchLinuxARM.writePost("An installer for ArchLinux on ARM (Raspberry Pi).");
+        ArchLinuxARM.setLink("https://notkaramel.github.io/ArchLinux-ARM-Installer/");
+
         return (
             <div className="projects" id="projects">
                 <h1 className="section-title">Projects</h1>
@@ -33,7 +35,8 @@ class MyProjects extends React.Component {
                 <section className="project-flex">
                     {Portfolio.createPost()}
                     {JavaCalculator.createPost()}
-                    {WordleHelper.createPost()}
+                    {ArchLinuxARM.createPost()}
+                    {/* {WordleHelper.createPost()} */}
                     {/* {ChordProgressionBuilder.createPost()} */}
                 </section>
             </div>
@@ -42,7 +45,7 @@ class MyProjects extends React.Component {
 }
 
 
-// Project object/class for each project I have done!
+// Project object/class for each project I have done
 class Project {
     constructor(project_name, github_link) {
         this.name = project_name;
