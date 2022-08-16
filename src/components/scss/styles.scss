@@ -11,17 +11,19 @@
         font-weight: bold;
         text-align: center;
         color: $dark-mint;
-        padding-bottom: 7vh;
+        padding-bottom: 3vh;
     }
 
     // Grid container
     .about-me-grid {
         // 3x3 grid
+        padding: 1rem 2rem;
         display: grid;
-        grid-template-columns: 20vw 40vw 20vw;
-        grid-template-rows: 20vh 20vh 20vh;
+        grid-template-columns: 18vw 32vw 18vw;
+        grid-template-rows: 18vh 27vh 18vh;
         align-items: center;
         height: max-content;
+        justify-content: space-around;
         justify-items: center;
 
         // Flex items by their id
@@ -32,11 +34,10 @@
                 grid-row: 1 / span 2;
                 
                 img{ 
-                    $profile-scale : 27vw;
+                    $profile-scale : min(42vw, 42vh);
                     vertical-align: middle;
                     width: $profile-scale;
-                    height: $profile-scale;
-                    padding: 0.5rem;
+                    padding: 0.5rem ;
                     border-radius: 50%;
                     border: 2px solid $pastel-mint;
                     margin: 1rem;
