@@ -9,11 +9,11 @@ class MyProjects extends React.Component {
 
         let WordleHelper = new Project("Wordle Helper", "https://github.com/notkaramel/WordleHelper");
         WordleHelper.writePost("A Chrome extension that helps you solve Wordle puzzles.");
-
+        WordleHelper.setLink("https://notkaramel.github.io/WordleHelper/")
+        
         let JavaCalculator = new Project("Java Calculator", "https://github.com/notkaramel/JavaCalculator");
         JavaCalculator.setLink("https://notkaramel.github.io/JavaCalculator/");
         JavaCalculator.writePost("A calculator application written in Java (JDK 18)");
-        //scrape this.github -> class="f4 my-3"
 
         let Portfolio = new Project("Portfolio", "https://github.com/notkaramel/notkaramel.github.io");
         Portfolio.setLink("https://notkaramel.github.io");
@@ -36,7 +36,7 @@ class MyProjects extends React.Component {
                     {Portfolio.createPost()}
                     {JavaCalculator.createPost()}
                     {ArchLinuxARM.createPost()}
-                    {/* {WordleHelper.createPost()} */}
+                    {WordleHelper.createPost()}
                     {/* {ChordProgressionBuilder.createPost()} */}
                 </section>
             </div>
@@ -81,7 +81,7 @@ class Project {
         return (
             <div className="project-grid" id={project_id}>
                 <p className="project-title">{this.name}</p>
-                <p className="project-post">{this.post}</p>
+                <p className="project-desc">{this.post}</p>
                 <div className="project-link">
                     <span className="link" id="github">
                         <a href={this.github}

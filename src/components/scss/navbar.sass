@@ -27,12 +27,13 @@ nav
                 span
                     color: $turned-off
                     display: none
-                    margin-left: 1rem
+                    margin-left: 5rem
                     white-space: nowrap
                 svg
+                    position: fixed
                     fill: $turned-off
-                    min-width: 2rem
-                    max-height: 2.1rem
+                    max-width: 2rem
+                    max-height: 2rem
                     margin: 1.5rem 1.5rem
         
     // Big screen
@@ -45,10 +46,8 @@ nav
             li
                 border-top: 0.3rem solid transparent
                 border-bottom: 0.3rem solid transparent
-                // &:last-child
-                //     margin-top: auto
-                a
-                    width: max-width
+                &:last-child
+                    margin-top: auto
 
         &:hover
             width: 16rem
@@ -80,6 +79,8 @@ nav
                 border-left: 0.01rem solid transparent
                 border-right: 0.01rem solid transparent
                 border-radius: 1rem
+                &:last-child
+                    display: none
                
                 a
                     justify-content: center
