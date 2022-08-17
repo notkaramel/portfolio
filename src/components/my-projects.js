@@ -79,11 +79,11 @@ class Project {
         // console.log(project_id);
 
         return (
-            <div className="project-flex-item" id={project_id}>
+            <div className="project-grid" id={project_id}>
                 <p className="project-title">{this.name}</p>
                 <p className="project-post">{this.post}</p>
-                <p className="project-link">
-                    <span className="github-link">
+                <div className="project-link">
+                    <span className="link" id="github">
                         <a href={this.github}
                             target="_blank"
                             rel="noreferrer"
@@ -91,10 +91,10 @@ class Project {
                             {github_icon}
                         </a>
                     </span>
-                    <span className="link-to-project" id={this.name + "-link"}>
+                    <span className="link" id="linkto">
                         {this.showLink()}
                     </span>
-                </p>
+                </div>
             </div>
         );
     }

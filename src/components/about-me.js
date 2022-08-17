@@ -12,7 +12,7 @@ const social_media = () => {
 
     let github = makeSocialMedia("github", github_icon, "https://github.com/notkaramel");
     let linkedin = makeSocialMedia("linkedin", linkedin_icon, "https://www.linkedin.com/in/antoinephan/");
-    let email = makeSocialMedia("email", email_icon, "mailto:hoangtuan11102@gmail.com");
+    let email = makeSocialMedia("email", email_icon, "mailto:antoine.phan@mail.mcgill.ca");
 
     return (
         <div className="about-me-grid-item" id="social-media">
