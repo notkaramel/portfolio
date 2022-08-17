@@ -15,7 +15,6 @@ const NavBar = () => {
                         {about_me_icon}
                         {span("About me")}
                     </a>
-                    
                 </li>
                 <li className="navbar-item">
                     <a href="#projects" className="nav-link">

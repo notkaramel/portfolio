@@ -130,7 +130,7 @@
         flex-wrap: wrap;
 
         justify-content: center;
-        gap: 1vw;
+        gap: 0.3rem;
         align-items: flex-start;
         background: $pastel-mint;
         padding: 2rem 1rem;
@@ -182,9 +182,9 @@
             // project's link
             .project-link {
                 justify-self: center;
-                width: 40%;
+                width: 42%;
                 display: inline-grid;
-                grid-template-columns: 1fr 0.75vw 1fr;
+                grid-template-columns: 1fr 1fr;
                 align-items: center;
                 .link {
                     &#github{
@@ -192,15 +192,14 @@
                     }
 
                     &#linkto{
-                        grid-column: 3;
+                        grid-column: 2;
                     }
                 }
 
-                a {
-                    svg {
-                        margin-top: auto;
-                        height: 2rem;
-                    }
+
+                svg {
+                    margin-top: auto;
+                    height: 2rem;
                 }
             }
         }
