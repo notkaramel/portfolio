@@ -30,12 +30,12 @@ const AboutMe = () => {
             {/* Use a flexbox */}
             <div className="about-me-grid">
                 <div className="about-me-grid-item" id="name">
-                    <p>👋 Hi! I'm Antoine Phan.</p>
+                    <p>👋 Hi! I'm <b>Antoine Phan</b>.</p>
                 </div>
                 <div className="about-me-grid-item" id="education">
                     <p>
-                        {mcgill_rouge} <br/>
-                        McGill University<br/>
+                        {mcgill_rouge} <br />
+                        <b>McGill University</b><br />
                         U1 Electrical Engineering
                     </p>
                 </div>
@@ -47,14 +47,16 @@ const AboutMe = () => {
                 </div>
 
                 <div className="about-me-grid-item" id="languages">
-                    <p> 🌐 Languages 🌐
+                    <b>🌐 Languages 🌐 </b><br />
                     <ul>
-                        <li>English: Bilingual</li>
-                        <li>French: Intermediate</li>
-                        <li>Vietnamese: Native</li>
-                        <li>Spanish: Basic</li>
+                        <li id="lang">
+                            English:<br />French:<br />Vietnamese:<br />Spanish:
+                        </li>
+                        <li />
+                        <li id="proficiency">
+                            Bilingual <br />Intermediate <br /> Native <br /> Elementary
+                        </li>
                     </ul>
-                    </p>
                 </div>
                 {social_media()}
             </div>

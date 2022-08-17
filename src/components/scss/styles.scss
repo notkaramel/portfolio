@@ -6,7 +6,7 @@
     height: max-content;
     width: 100%;
 
-    h1#title {
+    #title {
         font-size: 2.5rem;
         font-weight: bold;
         text-align: center;
@@ -19,7 +19,7 @@
         // 3x3 grid
         padding: 1rem 2rem;
         display: grid;
-        grid-template-columns: 18vw 32vw 18vw;
+        grid-template-columns: 18vw 27vw 18vw;
         grid-template-rows: 18vh 27vh 18vh;
         align-items: center;
         height: max-content;
@@ -34,9 +34,8 @@
                 grid-row: 1 / span 2;
                 
                 img{ 
-                    $profile-scale : min(42vw, 42vh);
                     vertical-align: middle;
-                    width: $profile-scale;
+                    width: min(42vw, 42vh);
                     padding: 0.5rem ;
                     border-radius: 50%;
                     border: 2px solid $pastel-mint;
@@ -45,9 +44,9 @@
                 }
             }
 
-            p {
-                padding: 0.7rem;
-                font-size: 1.2rem;
+            p, &#languages {
+                padding: 1rem;
+                font-size: 1.24rem;
                 border-radius: 1rem;
                 border: 2px solid $pastel-mint;
                 width: max-content;
@@ -61,24 +60,38 @@
             &#name {
                 grid-column: 1;
                 grid-row: 1;
-                justify-self: left;
+                justify-self: right;
                 align-self: normal;
+                margin-right: -1vw;
             }
 
             &#education {
                 grid-column: 1;
                 grid-row: 2 / span 2;
                 text-align: center;
+                justify-self: right;
+                margin-right: -2vw;
             }
 
             &#languages {
+                justify-self: left;
                 grid-column: 3;
-                grid-row: 1 / span 3;
-                padding-left: 2rem;
+                grid-row: 1 / span 2;
+                margin-left: -1vw;
+                padding-bottom: initial;
+
                 text-align: center;
                 ul {
                     list-style: none;
                     padding: 0;
+                    display: inline-grid;
+                    grid-template-columns: 1fr 1vw 1fr;
+                    li#lang{
+                        text-align: left;
+                    }
+                    li#proficiency{
+                        text-align: left;
+                    }
                 }
             }
 
@@ -89,7 +102,7 @@
                 svg {
                     fill: $dark-mint;
                     text-align: center;
-                    width: 2rem;
+                    width: 2.4rem;
                     padding: 0 1rem 0 1rem;
                     vertical-align: middle;
                 }
