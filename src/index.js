@@ -26,8 +26,8 @@ content.render(
     <AboutMe />
     <MyProjects />
     <MySkills />
-    <Experience />
-    <SideProjects />
+    {/* <Experience /> */}
+    {/* <SideProjects /> */}
   </React.StrictMode>
 );
 
