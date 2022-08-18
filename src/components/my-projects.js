@@ -75,7 +75,7 @@ class Project {
     }
 
     createPost() {
-        let project_id = this.name + "-class";
+        let project_id = this.name.replaceAll(' ', '-');
         // console.log(project_id);
 
         return (

@@ -155,6 +155,8 @@
             background-color: white;
             box-shadow: $box-shadow;
             
+            
+
             // project's title
             .project-title {
                 font-size: 1.5rem;
@@ -202,6 +204,7 @@
                     height: 2rem;
                 }
             }
+                        
         }
     }
 }
@@ -209,6 +212,7 @@
 // Skills component
 .skills {
     height: max-content;
+    border: 8px solid black;
 
     .section-title {
         font-size: 2.5rem;
@@ -217,76 +221,40 @@
         color: $dark-mint;
     }
 
-    // Skills .container
-    .skills-flex {
-        // make this a grid
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        align-items: flex-start;
-        background: $pastel-mint;
-        //padding: 2rem 1rem;
-        height: max-content;
-        box-shadow: $box-shadow-bold;
-        border-radius: 0.4rem;
-        overflow: hidden;
-        row-gap: 2rem;
-        padding: 1rem 0;
+    .skills-grid{
+        border: 8px solid gray;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 3rem;
+        column-gap: 1rem;
 
-        .skills-flex-item {
-            max-width: max-content;
+        // submodule-grid = skills-grid-item
+        .submodule-grid{
+            border: 8px solid pink;
+            display: grid;
+            grid-template-rows: 1fr 2fr 3fr;
+            //grid-template-columns: 1fr 1fr;
+            column-gap: 1rem;
+            row-gap: 1rem;
             align-items: center;
-        }
-
-        // #webdev {
-        //     max-width: 27rem;
-        // }
-
-        .skills-flex-item-title {
-            color: pink;
-            text-align: center;
-            color: rgb(12, 44, 48);
-            font-size: 2rem;
-            font-weight: 700;
-            margin: 0.2rem;
-            padding: 1rem;
-            border-bottom: 0.2rem solid beige;
-        }
-
-        .skills-flex-flex {
-            background-color: #fff;
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: space-evenly;
-            align-items: flex-start;
-            padding: 1rem 0.5rem;
-            //margin: 0;
-            margin: 1.5rem;
-            height: max-content;
-            border-radius: 1rem;
-            overflow: hidden;
-
-            &:hover {
-                box-shadow: $box-shadow-hover;
-                transition: all 0.2s ease-in-out;
-            }
-
-            // skill-flex-flex-item
-            .skill {
-                align-self: flex-end;
-                height: 4rem;
-                width: 4rem;
+            justify-items: center;
+            .submodule-title{
+                font-size: 1.5rem;
+                font-weight: bold;
                 text-align: center;
-                margin: 1rem;
-                padding: 0.3rem;
-
-                //border: 0.1rem solid $dark-mint;
+                color: blueviolet;
             }
-
+            .skill {
+                    height: 3rem;
+                    width: 3rem;
+                    text-align: center;
+                    margin: 1rem;
+                    padding: 0.3rem;   
+            }
         }
     }
+    
 }
 
 // Footer component

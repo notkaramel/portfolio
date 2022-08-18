@@ -3,9 +3,16 @@ import './scss/navbar.sass';
 import { about_me_icon, projects_icon, skills_icon, music_icon, experience_icon, darkmode_icon } from "./icons/icons";
 
 const NavBar = () => {
-    
-    
     let span = (name)=><span className="link-text">{name}</span>;
+    // const darkmode_button = document.getElementById('darkmode-button');
+    // darkmode_button.addEventListener('click', () => {
+    //     let body = document.getElementsByTagName('body')[0];
+    //     if (body.classList.contains('dark')) {
+    //         body.classList.replace('light', 'dark');
+    //     } else {
+    //         body.classList.replace('dark', 'light');
+    //     }
+    // });
 
     return (
         <nav className="navbar">
@@ -40,7 +47,7 @@ const NavBar = () => {
                         {span("Side Projects")}
                     </a>
                 </li>
-                <li className="navbar-item">
+                <li className="navbar-item" id="darkmode-button">
                     <a href="#darkmode">
                         {darkmode_icon}
                         {span("Darkmode")}
