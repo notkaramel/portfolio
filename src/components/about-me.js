@@ -32,18 +32,18 @@ const AboutMe = () => {
                 <div className="about-me-grid-item" id="name">
                     <p>👋 Hi! I'm <b>Antoine Phan</b>.</p>
                 </div>
+                <div className="about-me-grid-item" id="profile-picture">
+                    <img
+                        src="https://avatars.githubusercontent.com/u/24505220?v=4"
+                        alt="profile_pic">
+                    </img>
+                </div>
                 <div className="about-me-grid-item" id="education">
                     <p>
                         {mcgill_rouge} <br />
                         <b>McGill University</b><br />
                         U1 Electrical Engineering
                     </p>
-                </div>
-                <div className="about-me-grid-item" id="profile-picture">
-                    <img
-                        src="https://avatars.githubusercontent.com/u/24505220?v=4"
-                        alt="profile_pic">
-                    </img>
                 </div>
 
                 <div className="about-me-grid-item" id="languages">

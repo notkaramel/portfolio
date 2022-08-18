@@ -1,5 +1,4 @@
 @import './variables.sass'
-$screen-breakpoint: $screen-small
 
 nav
     position: fixed
@@ -11,7 +10,6 @@ nav
         margin: 0
         display: flex
         align-items: center
-        //justify-content: center
         height: 100%
         
         li
@@ -27,19 +25,18 @@ nav
                 text-decoration: none
                 font-weight: bold
                 span
-                    color: $turned-off
                     display: none
                     margin-left: 5rem
                     white-space: nowrap
                 svg
-                    position: fixed
+                    position: absolute
                     fill: $turned-off
                     max-width: 2rem
                     max-height: 2rem
                     margin: 1.5rem 1.5rem
         
     // Big screen
-    @media (min-width: $screen-breakpoint)
+    @media (min-width: $screen-small)
         width: 5rem
         height: 100vh
         top: 0
@@ -68,9 +65,9 @@ nav
                     transition: all 200ms ease-in-out
 
         transition: width 300ms ease-in-out
-        
-    // Small screen
-    @media (max-width: $screen-breakpoint)
+    
+    // Small + phone screen (xsmall + small)
+    @media (max-width: $screen-small)
         height: 5rem
         width: 100vw
         bottom: 0

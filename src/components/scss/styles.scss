@@ -1,6 +1,15 @@
 @import './variables.sass';
 @import './style.sass';
 
+// small screen:
+//@media (max-width: $screen-small)
+
+// tablet screen:
+//@media (min-width: $screen-medium)
+
+// large screen:
+//@media (min-width: $screen-large)
+
 // About Me component
 .about-me {
     height: max-content;
@@ -14,13 +23,81 @@
         padding-bottom: 3vh;
     }
 
+
     // Grid container
     .about-me-grid {
         // 3x3 grid
         padding: 1rem 2rem;
-        display: grid;
-        grid-template-columns: 18vw 27vw 18vw;
-        grid-template-rows: 18vh 27vh 18vh;
+        // phone screen
+        @media (min-width: $screen-xsmall) {
+            display: flex;
+            flex-direction: column;
+            .about-me-grid-item {
+                
+                &#name {
+                    justify-self: center;
+                }
+                
+                &#education {
+                    text-align: center;
+                    justify-self: center;
+                }
+                &#profile-picture {
+                    justify-self: center;
+                }
+
+                &#languages {
+                    justify-self: center;
+                    padding-bottom: initial;
+                }
+
+                &#social-media {
+                }
+            }
+        }
+        // laptop screen
+        @media (min-width: $screen-medium) {
+            display: grid;
+            grid-template-columns: 18vw 27vw 18vw;
+            grid-template-rows: 18vh 27vh 18vh;
+
+            .about-me-grid-item {
+                &#profile-picture {
+                    grid-column: 2;
+                    grid-row: 1 / span 2;
+                }
+
+                &#name {
+                    grid-column: 1;
+                    grid-row: 1;
+                    justify-self: right;
+                    align-self: normal;
+                    margin-right: -1vw;
+                }
+
+                &#education {
+                    grid-column: 1;
+                    grid-row: 2 / span 2;
+                    text-align: center;
+                    justify-self: right;
+                    margin-right: -2vw;
+                }
+
+                &#languages {
+                    grid-column: 3;
+                    grid-row: 1 / span 2;
+                    justify-self: left;
+                    margin-left: -1vw;
+                    padding-bottom: initial;
+                }
+
+                &#social-media {
+                    grid-column: 2;
+                    grid-row: 3;
+                }
+            }
+        }
+
         align-items: center;
         height: max-content;
         justify-content: space-around;
@@ -28,23 +105,18 @@
 
         // Flex items by their id
         .about-me-grid-item {
-            
-            &#profile-picture {
-                grid-column: 2;
-                grid-row: 1 / span 2;
-                
-                img{ 
-                    vertical-align: middle;
-                    width: min(42vw, 42vh);
-                    padding: 0.5rem ;
-                    border-radius: 50%;
-                    border: 2px solid $pastel-mint;
-                    margin: 1rem;
-                    box-shadow: $box-shadow;
-                }
+            &#profile-picture>img {
+                vertical-align: middle;
+                width: min(24rem, 63vw);
+                padding: 0.5rem;
+                border-radius: 50%;
+                border: 2px solid $pastel-mint;
+                margin: 1rem;
+                box-shadow: $box-shadow;
             }
 
-            p, &#languages {
+            p,
+            &#languages {
                 padding: 1rem;
                 font-size: 1.24rem;
                 border-radius: 1rem;
@@ -57,48 +129,28 @@
                 }
             }
 
-            &#name {
-                grid-column: 1;
-                grid-row: 1;
-                justify-self: right;
-                align-self: normal;
-                margin-right: -1vw;
-            }
-
-            &#education {
-                grid-column: 1;
-                grid-row: 2 / span 2;
-                text-align: center;
-                justify-self: right;
-                margin-right: -2vw;
-            }
-
             &#languages {
-                justify-self: left;
-                grid-column: 3;
-                grid-row: 1 / span 2;
-                margin-left: -1vw;
-                padding-bottom: initial;
-
                 text-align: center;
+
                 ul {
                     list-style: none;
                     padding: 0;
                     display: inline-grid;
                     grid-template-columns: 1fr 1vw 1fr;
-                    li#lang{
+
+                    li#lang {
                         text-align: left;
                     }
-                    li#proficiency{
+
+                    li#proficiency {
                         text-align: left;
                     }
                 }
             }
 
             &#social-media {
-                grid-column: 2;
-                grid-row: 3;
                 text-align: center;
+                padding-top: 2.4vh;
                 svg {
                     fill: $dark-mint;
                     text-align: center;
@@ -110,6 +162,7 @@
         }
     }
 }
+
 
 // Projects component
 .projects {
@@ -139,7 +192,7 @@
         margin-bottom: 1rem;
         border-radius: 0.6rem;
         overflow: hidden;
-        
+
         // grid = flex-item = projects post
         .project-grid {
             display: grid;
@@ -149,13 +202,13 @@
             text-align: center;
             padding: 0.3rem;
             margin: 0.3rem;
-            
+
             // Make Projects's post look cool with shadow
             border-radius: 0.5em;
             background-color: white;
             box-shadow: $box-shadow;
-            
-            
+
+
 
             // project's title
             .project-title {
@@ -164,6 +217,7 @@
                 margin: 1rem 0 0 0;
                 height: max-content;
             }
+
             &:hover {
                 box-shadow: $box-shadow-hover;
                 transition: all 0.2s ease-in-out;
@@ -188,12 +242,13 @@
                 display: inline-grid;
                 grid-template-columns: 1fr 1fr;
                 align-items: center;
+
                 .link {
-                    &#github{
+                    &#github {
                         grid-column: 1;
                     }
 
-                    &#linkto{
+                    &#linkto {
                         grid-column: 2;
                     }
                 }
@@ -204,7 +259,7 @@
                     height: 2rem;
                 }
             }
-                        
+
         }
     }
 }
@@ -213,6 +268,7 @@
 .skills {
     height: max-content;
     width: 100%;
+
     .section-title {
         font-size: 2.5rem;
         font-weight: bold;
@@ -220,22 +276,24 @@
         color: $dark-mint;
     }
 
-    .skills-grid{
-        background-color: $pastel-mint;
-        border-radius: 0.5em;
-        box-shadow: $box-shadow;
-        padding: 1rem;
-        margin: 1rem;
-        justify-items: center;
+    .skills-grid {
+
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
         gap: 1rem;
-        column-gap: 1rem;
+
+        padding: 1rem;
+        margin: 1rem;
+        justify-items: center;
         justify-content: space-evenly;
-        overflow: scroll;
+        // -- decor --
+        background-color: $pastel-mint;
+        border-radius: 0.5em;
+        box-shadow: $box-shadow;
+
         // submodule-grid = skills-grid-item = section
-        .submodule-grid{
+        .submodule-grid {
             background-color: white;
             border-radius: 0.5em;
             box-shadow: $box-shadow;
@@ -251,59 +309,61 @@
             justify-items: center;
             word-wrap: break-word;
 
-            .title{
+            .title {
                 font-size: 2rem;
                 font-weight: bold;
                 text-align: center;
                 color: $dark-mint;
                 border-bottom: solid 0.2rem $dark-mint;
                 width: 100%;
-                p{
+
+                p {
                     margin: 1rem;
                 }
             }
 
-            .description{
+            .description {
                 width: 100%;
                 font-size: 1.24rem;
                 font-weight: 500;
                 text-align: justify;
             }
-            
-            #SysDevLangs{
+
+            #SysDevLangs {
                 display: grid;
                 grid-template-columns: repeat(4, 1fr);
             }
 
-            #DataSciLangs{
+            #DataSciLangs {
                 display: grid;
                 grid-template-rows: 1fr 1fr;
                 grid-template-columns: repeat(4, 1fr);
             }
 
-            #WebDevLangs{
+            #WebDevLangs {
                 display: grid;
-                grid-template-columns: repeat(4, 1fr);;
+                grid-template-columns: repeat(4, 1fr);
+                ;
                 grid-template-rows: 1fr 1fr;
 
             }
 
-            #SoftDevLangs{
+            #SoftDevLangs {
                 display: grid;
                 grid-template-columns: 1fr 1fr 1fr;
                 grid-template-rows: 1fr 1fr;
             }
 
             .skill {
-                    height: 3.3rem;
-                    text-align: center;
-                    margin: 1rem;
-                    padding: 0.3rem;   
+                height: 3.3rem;
+                text-align: center;
+                margin: 1rem;
+                padding: 0.3rem;
             }
 
         }
     }
-    
+
 }
 
 // Footer component

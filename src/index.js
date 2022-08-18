@@ -25,7 +25,7 @@ content.render(
   <React.StrictMode>
     <AboutMe />
     <MyProjects />
-    <MySkills />
+    {/* <MySkills /> */}
     {/* <Experience /> */}
     {/* <SideProjects /> */}
   </React.StrictMode>
@@ -35,7 +35,7 @@ content.render(
 const footer = ReactDOM.createRoot(document.getElementById('footer'));
 footer.render(
   <React.StrictMode>
-    <Footer />
+    {/* <Footer /> */}
   </React.StrictMode>
 )
 
