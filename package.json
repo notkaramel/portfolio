@@ -21,7 +21,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "deploy": "react-scripts build && gh-pages -d build",
-    "update": "git add . && git commit -m \"NPM Auto Update\" && git push"
+    "update": "git add . && git commit -m \"Update from npm scripts\" && git push"
   },
   "eslintConfig": {
     "extends": [
