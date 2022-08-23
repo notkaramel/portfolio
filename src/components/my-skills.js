@@ -33,7 +33,11 @@ const SystemDev = () => {
                 for <b>Arduino</b> & <b>Raspberry Pi</b > GPIO, respectively.
             </div>
             <div className="submodule-item" id="SysDevLangs">
-                {systemSkills.map(lang => langIcon(lang))}
+                {systemSkills.map(lang => 
+                <div key={lang}>
+                    {langIcon(lang)}
+                </div>
+                )}
             </div>
         </div>
     );
@@ -54,7 +58,11 @@ const DataScience = () => {
             </div>
 
             <div className="submodule-item" id="DataSciLangs">
-                {dataSkills.map(lang => langIcon(lang))}
+                {dataSkills.map(lang => 
+                <div key={lang}>
+                    {langIcon(lang)}
+                </div>
+                )}
             </div>
         </div>
     );
@@ -76,7 +84,11 @@ function WebDev() {
             </div>
 
             <div className="submodule-item" id="WebDevLangs">
-                {webdevSkills.map(lang => langIcon(lang))}
+                {webdevSkills.map(lang =>
+                <div key={lang}>
+                    {langIcon(lang)}
+                </div>
+                )}
             </div>
         </div>
     );
@@ -98,13 +110,17 @@ const SoftwareDev = () => {
                 </p>
             </div>
             <div className="submodule-item" id="SoftDevLangs">
-                {softwareLangs.map(lang => langIcon(lang))}
+                {softwareLangs.map(lang =>
+                    <div key={lang}>
+                        {langIcon(lang)}
+                    </div>
+                )}
             </div>
         </div>
     );
 }
 
-export default function MySkills() {
+const MySkills = () => {
     return (
         <div className="skills" id="skills">
             <h1 className="section-title">Skills</h1>
@@ -117,3 +133,5 @@ export default function MySkills() {
         </div>
     );
 }
+
+export default MySkills;
