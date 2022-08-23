@@ -35,18 +35,18 @@ const NavBar = () => {
                         {span("Skills")}
                     </a>
                 </li>
-                <li className="navbar-item">
+                {/* <li className="navbar-item">
                     <a href="#experience" className="nav-link">
                         {experience_icon}
                         {span("Experience")}
                     </a>
-                </li>
-                <li className="navbar-item">
+                </li> */}
+                {/* <li className="navbar-item">
                     <a href="#side-projects" className="nav-link">
                         {music_icon}
                         {span("Side Projects")}
                     </a>
-                </li>
+                </li> */}
                 <li className="navbar-item" id="darkmode-button">
                     <a href="#darkmode">
                         {darkmode_icon}
