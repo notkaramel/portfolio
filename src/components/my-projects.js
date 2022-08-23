@@ -23,7 +23,7 @@ class MyProjects extends React.Component {
         ChordProgressionBuilder.writePost("An app that builds a chord progression based on your desired voice & progression.");
 
         let ArchLinuxARM = new Project("ArchLinux on ARM", "https://github.com/notkaramel/ArchLinux-ARM-Installer");
-        ArchLinuxARM.writePost("An installer for ArchLinux on ARM (Raspberry Pi).");
+        ArchLinuxARM.writePost("ArchLinux installer for Raspberry Pi.");
         ArchLinuxARM.setLink("https://notkaramel.github.io/ArchLinux-ARM-Installer/");
 
         return (

@@ -8,7 +8,7 @@ import AboutMe from './components/about-me';
 import MySkills from './components/my-skills';
 import MyProjects from './components/my-projects';
 import SideProjects from './components/side-projects';
-import Experience from './components/work-experience';
+import Experience from './components/experience';
 import Footer from './components/footer';
 
 // Navigation bar section
@@ -25,7 +25,7 @@ content.render(
   <React.StrictMode>
     <AboutMe />
     <MyProjects />
-    {/* <MySkills /> */}
+    <MySkills />
     {/* <Experience /> */}
     {/* <SideProjects /> */}
   </React.StrictMode>

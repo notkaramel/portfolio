@@ -1,14 +1,15 @@
 import React from "react";
 // First usage of style.sass with the new naming convention
-import "./scss/style.sass";
+import "./scss/styles.scss";
 
 export default function Experience() {
     return (
-        <div className="section" id="experience">
+        <div className="experience" id="experience">
             <h1 className="section-title">Experience</h1>
             <div className="container">
                 <div className="container-flex">
-                    <p className="container-flex-title">
+                    <div className="year">JUN-2020 ~ AUG-2021</div>
+                    <p className="title">
                         VICAS VIETNAM
                     </p>
                     <div className="container-flex-item">
@@ -16,8 +17,9 @@ export default function Experience() {
                     </div>
                 </div>
                 <div className="container-flex">
-                    <p className="container-flex-title">
-                        CodeJam
+                    <div className="year">FEB-2019 ~ AUG-2020</div>
+                    <p className="title">
+                        Đồ Chơi Chữ
                     </p>
                 </div>
             </div>

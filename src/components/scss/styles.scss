@@ -1,5 +1,5 @@
 @import './variables.sass';
-@import './style.sass';
+// @import './style.sass';
 
 // small screen:
 //@media (max-width: $screen-small)
@@ -10,16 +10,24 @@
 // large screen:
 //@media (min-width: $screen-large)
 
+// current configurations:
+//@media (max-width: $screen-medium)
+//@media (min-width: $screen-medium)
+
+// Common components
+.section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    color: $dark-mint;
+}
+
 // About Me component
 .about-me {
     height: max-content;
     width: 100%;
 
     #title {
-        font-size: 2.5rem;
-        font-weight: bold;
-        text-align: center;
-        color: $dark-mint;
         padding-bottom: 3vh;
     }
 
@@ -29,7 +37,7 @@
         // 3x3 grid
         padding: 1rem 2rem;
         // phone screen
-        @media (min-width: $screen-xsmall) {
+        @media (max-width: $screen-medium) {
             display: flex;
             flex-direction: column;
             .about-me-grid-item {
@@ -52,6 +60,7 @@
                 }
 
                 &#social-media {
+                    padding-top: 2.4vh;
                 }
             }
         }
@@ -94,6 +103,7 @@
                 &#social-media {
                     grid-column: 2;
                     grid-row: 3;
+                    padding-top: 3.6vh;
                 }
             }
         }
@@ -107,7 +117,7 @@
         .about-me-grid-item {
             &#profile-picture>img {
                 vertical-align: middle;
-                width: min(24rem, 63vw);
+                width: min(21rem, 57vw);
                 padding: 0.5rem;
                 border-radius: 50%;
                 border: 2px solid $pastel-mint;
@@ -150,7 +160,6 @@
 
             &#social-media {
                 text-align: center;
-                padding-top: 2.4vh;
                 svg {
                     fill: $dark-mint;
                     text-align: center;
@@ -163,19 +172,10 @@
     }
 }
 
-
 // Projects component
 .projects {
     height: max-content;
     width: 100%;
-
-    .section-title {
-        font-size: 2.5rem;
-        font-weight: bold;
-        text-align: center;
-        color: $dark-mint;
-    }
-
     // Projects container
     .project-flex {
         display: flex;
@@ -231,7 +231,7 @@
             // project's description
             .project-desc {
                 font-size: 1.36rem;
-                font-weight: 500;
+                font-weight: 420;
                 margin: 0.2rem 0;
             }
 
@@ -269,29 +269,31 @@
     height: max-content;
     width: 100%;
 
-    .section-title {
-        font-size: 2.5rem;
-        font-weight: bold;
-        text-align: center;
-        color: $dark-mint;
-    }
-
     .skills-grid {
-
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        gap: 1rem;
+        // Phone Screen
+        @media (max-width: $screen-medium){
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        // PC Screen
+        @media (min-width: $screen-medium){
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 1rem;
+            justify-items: center;
+            justify-content: space-evenly;
+        }
+        
 
         padding: 1rem;
-        margin: 1rem;
-        justify-items: center;
-        justify-content: space-evenly;
+        
         // -- decor --
         background-color: $pastel-mint;
         border-radius: 0.5em;
-        box-shadow: $box-shadow;
-
+        box-shadow: $box-shadow-bold;
         // submodule-grid = skills-grid-item = section
         .submodule-grid {
             background-color: white;
@@ -301,10 +303,10 @@
             margin: 1rem;
             width: 80%;
             display: grid;
-            grid-template-rows: 4.2rem 12rem 12rem;
+            grid-template-rows: 3.6rem 12rem 9rem;
             column-gap: 0.3rem;
             row-gap: 0.3rem;
-            height: 30rem;
+            height: 27rem;
             align-items: center;
             justify-items: center;
             word-wrap: break-word;
@@ -355,7 +357,7 @@
             }
 
             .skill {
-                height: 3.3rem;
+                height: 3.6rem;
                 text-align: center;
                 margin: 1rem;
                 padding: 0.3rem;
@@ -364,6 +366,16 @@
         }
     }
 
+}
+
+.experience{
+     .container{
+        color: $dark-mint;
+     }
+     .container-flex::after{
+        content: "no";
+        background-color:aqua;
+     }
 }
 
 // Footer component
