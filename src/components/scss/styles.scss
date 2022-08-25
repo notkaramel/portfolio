@@ -380,14 +380,36 @@
 
 // Footer component
 .footer {
-
-    p,
-    a {
-        width: 100%;
+    width: 80vw;
+    margin-bottom: 1rem;
+    box-shadow: $box-shadow-bold;
+    border-radius: 0.5rem;
+    padding: 1rem 0;
+    background-color: $pastel-mint;
+    .container{
+        border-radius: 0.5rem;
+        box-shadow: $box-shadow;
+        padding: 0.3rem;
+        background-color: white;
+        margin: 1rem 2rem;
         text-decoration: none;
         text-align: center;
-        color: #fff;
-        background-color: $dark-mint;
-        padding: 1rem;
+        font-weight: 480;
+        font-size: 1.2rem;
+        color: black;
+        line-height: 1.5rem;
+        transition: all 2s ease-in-out;
+        a{
+            font-weight: bold;
+            color: $dark-mint;
+            text-decoration: none;
+            &:visited{
+                color: $dark-mint;
+            }
+            &:hover{
+                text-shadow: $box-shadow-hover;
+            }
+        }
+        // padding: 1rem;
     }
 }

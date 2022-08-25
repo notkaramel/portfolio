@@ -30,7 +30,7 @@ const NavBar = () => {
                     </a>
                 </li>
                 <li className="navbar-item">
-                    <a href="#skills" className="nav-link">
+                    <a href="#skills" className="nav-link"z>
                         {skills_icon}
                         {span("Skills")}
                     </a>
