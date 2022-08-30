@@ -17,8 +17,7 @@ const langIcon = (lang) => {
     );
 }
 
-
-const SystemDev = () => {
+function SystemDev() {
     let systemSkills = ["linux", "bash", "raspberrypi", "arduino"]
     return (
         <div className="submodule-grid" id="system-dev">
@@ -43,7 +42,7 @@ const SystemDev = () => {
     );
 }
 
-const DataScience = () => {
+function DataScience() {
     let dataSkills = ["python", "julia", "r", "matlab", "numpy", "pandas", "pytorch", "tensorflow"];
     return (
         <div className="submodule-grid" id="data-science">
@@ -94,8 +93,7 @@ function WebDev() {
     );
 }
 
-
-const SoftwareDev = () => {
+function SoftwareDev() {
     const softwareLangs = ["c", "cplusplus", "java", "kotlin", "android", "androidstudio"]
     return (
         <div className="submodule-grid" id="system-dev">

@@ -267,7 +267,6 @@
 // Skills component
 .skills {
     height: max-content;
-    width: 100%;
 
     .skills-grid {
         // Phone Screen
@@ -301,7 +300,7 @@
             box-shadow: $box-shadow;
             padding: 2rem;
             margin: 1rem;
-            width: 80%;
+            width: fit-content;
             display: grid;
             grid-template-rows: 3.6rem 12rem 9rem;
             column-gap: 0.3rem;
@@ -380,11 +379,13 @@
 
 // Footer component
 .footer {
+    align-items: center;
     width: 80vw;
+    padding: 0 1rem;
     margin-bottom: 1rem;
     box-shadow: $box-shadow-bold;
     border-radius: 0.5rem;
-    padding: 1rem 0;
+    padding: 1rem;
     background-color: $pastel-mint;
     .container{
         border-radius: 0.5rem;
