@@ -35,8 +35,8 @@
     // Grid container
     .about-me-grid {
         // 3x3 grid
-        padding: 1rem 2rem;
         // phone screen
+        
         @media (max-width: $screen-medium) {
             display: flex;
             flex-direction: column;
@@ -107,7 +107,7 @@
                 }
             }
         }
-
+        padding: 1rem 2rem;
         align-items: center;
         height: max-content;
         justify-content: space-around;
@@ -117,7 +117,7 @@
         .about-me-grid-item {
             &#profile-picture>img {
                 vertical-align: middle;
-                width: min(21rem, 57vw);
+                width: min(21rem, 54vw);
                 padding: 0.5rem;
                 border-radius: 50%;
                 border: 2px solid $pastel-mint;
