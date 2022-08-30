@@ -9,10 +9,10 @@ class MyProjects extends React.Component {
 
         let WordleHelper = new Project("Wordle Helper", "https://github.com/notkaramel/WordleHelper");
         WordleHelper.writePost("A Chrome extension that helps you solve Wordle puzzles.");
-        WordleHelper.setLink("https://notkaramel.github.io/WordleHelper/")
+        WordleHelper.setLink("./WordleHelper/")
         
         let JavaCalculator = new Project("Java Calculator", "https://github.com/notkaramel/JavaCalculator");
-        JavaCalculator.setLink("https://notkaramel.github.io/JavaCalculator/");
+        JavaCalculator.setLink("./JavaCalculator/");
         JavaCalculator.writePost("A calculator application written in Java (JDK 18)");
 
         let Portfolio = new Project("Portfolio", "https://github.com/notkaramel/notkaramel.github.io");
@@ -24,7 +24,7 @@ class MyProjects extends React.Component {
 
         let ArchLinuxARM = new Project("ArchLinux on ARM", "https://github.com/notkaramel/ArchLinux-ARM-Installer");
         ArchLinuxARM.writePost("ArchLinux installer for Raspberry Pi.");
-        ArchLinuxARM.setLink("https://notkaramel.github.io/ArchLinux-ARM-Installer/");
+        ArchLinuxARM.setLink("./ArchLinux-ARM-Installer/");
 
         return (
             <div className="projects" id="projects">
@@ -36,7 +36,7 @@ class MyProjects extends React.Component {
                     {Portfolio.createPost()}
                     {JavaCalculator.createPost()}
                     {ArchLinuxARM.createPost()}
-                    {WordleHelper.createPost()}
+                    {/* {WordleHelper.createPost()} */}
                     {/* {ChordProgressionBuilder.createPost()} */}
                 </section>
             </div>

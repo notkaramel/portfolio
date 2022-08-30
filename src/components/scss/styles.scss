@@ -280,7 +280,7 @@
             flex-direction: column;
             align-items: center;
             .submodule-grid {
-                height: max-content;
+            height: max-content;
             grid-template-rows: max-content 12rem max-content;
             grid-template-columns: 60vw;
                 .submodule-item {
@@ -297,7 +297,6 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             grid-template-rows: 1fr 1fr;
-            gap: 1rem;
             justify-items: center;
             justify-content: space-evenly;
 
@@ -310,22 +309,21 @@
             
                 #DataSciLangs {
                     display: grid;
-                    grid-template-rows: 1fr 1fr;
+                    grid-template-rows: 1fr;
                     grid-template-columns: repeat(4, 1fr);
                 }
             
                 #WebDevLangs {
                     display: grid;
-                    grid-template-columns: repeat(4, 1fr);
-                    ;
+                    grid-template-columns: repeat(3, 1fr);
                     grid-template-rows: 1fr 1fr;
             
                 }
             
                 #SoftDevLangs {
                     display: grid;
-                    grid-template-columns: 1fr 1fr 1fr;
-                    grid-template-rows: 1fr 1fr;
+                    grid-template-columns: repeat(3, 1fr);
+                    grid-template-rows: 1fr;
                 }
             }
         }
@@ -340,8 +338,6 @@
             box-shadow: $box-shadow;
             padding: 2rem;
             margin: 1rem;
-            // width: fit-content;
-            //height: 27rem;
             align-items: center;
             justify-items: center;
             word-wrap: break-word;
@@ -364,6 +360,11 @@
                 font-size: 1.24rem;
                 font-weight: 500;
                 text-align: justify;
+                a{
+                    text-decoration: none;
+                    color: $dark-mint;
+                    font-weight: 600;
+                }
             }
 
             .skill {

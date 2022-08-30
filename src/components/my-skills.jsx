@@ -25,11 +25,11 @@ function SystemDev() {
                 <p>System Development</p>
             </div>
             <div className='description'>
-                I am an enthusiast on system developement with
-                moderate experience in using Linux
-                (<b>Debian/Ubuntu</b> and <b>Arch Linux</b>) and
-                writing <b>C++/Python</b> scripts
-                for <b>Arduino</b> & <b>Raspberry Pi</b > GPIO, respectively.
+                I am enthusiastic about system developement with
+                much experience using Linux 
+                (<b>Ubuntu/Raspbian</b> and <b>Arch Linux</b>) and
+                writing <b>Python</b> and <b>C++</b> scripts
+                for <b>Raspberry Pi GPIO</b> & <b>Arduino</b>, respectively.
             </div>
             <div className="submodule-item" id="SysDevLangs">
                 {systemSkills.map(lang => 
@@ -43,17 +43,24 @@ function SystemDev() {
 }
 
 function DataScience() {
-    let dataSkills = ["python", "julia", "r", "matlab", "numpy", "pandas", "pytorch", "tensorflow"];
+    // let dataSkills = ["python", "julia", "r", "matlab", "numpy", "pandas", "pytorch", "tensorflow"];
+    let dataSkills = ["python", "r", "numpy", "pandas"];
+
     return (
         <div className="submodule-grid" id="data-science">
             <div className="title">
                 <p>Data Science</p>
             </div>
-            <div className='description'>
+            {/* <div className='description'>
                 I self-taught data science using <b>Python</b> packages
                 including <b>Numpy</b>, <b>Pandas</b>, <b>PyTorch</b>,
                 and <b>TensorFlow</b>. I also have minor experience in
                 using <b>R</b> and <b>Julia</b> for machine learning.
+            </div> */}
+            <div className='description'>
+                I self-taught data science from <a href="https://www.kaggle.com">kaggle.com</a> using 
+                <b> Python</b> packages such as <b>numpy</b> and <b>pandas</b>. Although I still have
+                a lot to learn, I am confident in my ability to study new knowledge efficiently.
             </div>
 
             <div className="submodule-item" id="DataSciLangs">
@@ -68,7 +75,7 @@ function DataScience() {
 }
 
 function WebDev() {
-    let webdevSkills = ["javascript", "typescript", "react", "sass", "html5", "css3", "nodejs", "markdown"];
+    let webdevSkills = ["react", "sass", "javascript", "html5", "css3", "markdown"];
     return (
         <div className="submodule-grid" id="web-dev">
             <div className="title">
@@ -77,8 +84,8 @@ function WebDev() {
             <div className='description'>
                 <p>
                     I enjoy building front-end web applications.
-                    I have experience in <b>ReactJS</b>, <b>Node.js</b>,
-                    and <b>Sass</b> from self-teaching and building apps on my own.
+                    I have experience in <b>ReactJS</b> and <b>SASS</b> from
+                    self-teaching and building this web app on my free time.
                 </p>
             </div>
 
@@ -94,7 +101,7 @@ function WebDev() {
 }
 
 function SoftwareDev() {
-    const softwareLangs = ["c", "cplusplus", "java", "kotlin", "android", "androidstudio"]
+    const softwareLangs = ["c", "cplusplus", "python", "java", "git"]
     return (
         <div className="submodule-grid" id="system-dev">
             <div className="title">
@@ -102,9 +109,9 @@ function SoftwareDev() {
             </div>
             <div className='description'>
                 <p>
-                    I have been coding <b>C</b> and <b>C++</b> for the past 5 years
-                    and <b>Java</b> for 1 year. <b>Kotlin</b> and <b>Android</b> are fairly new
-                    to me as I am still learning and building simple apps.
+                    I have been coding in <b>C</b> and <b>C++</b> for the past 5 years,
+                    with moderate experience in using <b>Python</b> and <b>Java</b> for
+                    more than 1 year. I am also familiar with <b>Git</b> for version control.
                 </p>
             </div>
             <div className="submodule-item" id="SoftDevLangs">
