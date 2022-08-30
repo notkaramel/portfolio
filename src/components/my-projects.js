@@ -16,7 +16,7 @@ class MyProjects extends React.Component {
         JavaCalculator.writePost("A calculator application written in Java (JDK 18)");
 
         let Portfolio = new Project("Portfolio", "https://github.com/notkaramel/notkaramel.github.io");
-        Portfolio.setLink("https://notkaramel.github.io");
+        Portfolio.setLink("https://antoinephan.me");
         Portfolio.writePost("This portfolio!");
 
         let ChordProgressionBuilder = new Project("Chord Progression Builder", "https://github.com/notkaramel/ChordProgressionBuilder");

@@ -269,11 +269,27 @@
     height: max-content;
 
     .skills-grid {
+        // -- decor --
+        background-color: $pastel-mint;
+        border-radius: 0.5em;
+        box-shadow: $box-shadow-bold;
+        padding: 1rem;
         // Phone Screen
         @media (max-width: $screen-medium){
             display: flex;
             flex-direction: column;
             align-items: center;
+            .submodule-grid {
+                height: max-content;
+            grid-template-rows: max-content 12rem max-content;
+            grid-template-columns: 60vw;
+                .submodule-item {
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    justify-content: space-evenly;
+                }
+            }
         }
         
         // PC Screen
@@ -284,28 +300,48 @@
             gap: 1rem;
             justify-items: center;
             justify-content: space-evenly;
+
+            .submodule-grid {
+                grid-template-rows: 3.6rem 12rem 9rem;
+                #SysDevLangs {
+                    display: grid;
+                    grid-template-columns: repeat(4, 1fr);
+                }
+            
+                #DataSciLangs {
+                    display: grid;
+                    grid-template-rows: 1fr 1fr;
+                    grid-template-columns: repeat(4, 1fr);
+                }
+            
+                #WebDevLangs {
+                    display: grid;
+                    grid-template-columns: repeat(4, 1fr);
+                    ;
+                    grid-template-rows: 1fr 1fr;
+            
+                }
+            
+                #SoftDevLangs {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr;
+                    grid-template-rows: 1fr 1fr;
+                }
+            }
         }
         
-
-        padding: 1rem;
-        
-        // -- decor --
-        background-color: $pastel-mint;
-        border-radius: 0.5em;
-        box-shadow: $box-shadow-bold;
         // submodule-grid = skills-grid-item = section
         .submodule-grid {
+            display: grid;
+            column-gap: 0.3rem;
+            row-gap: 0.3rem;
             background-color: white;
             border-radius: 0.5em;
             box-shadow: $box-shadow;
             padding: 2rem;
             margin: 1rem;
-            width: fit-content;
-            display: grid;
-            grid-template-rows: 3.6rem 12rem 9rem;
-            column-gap: 0.3rem;
-            row-gap: 0.3rem;
-            height: 27rem;
+            // width: fit-content;
+            //height: 27rem;
             align-items: center;
             justify-items: center;
             word-wrap: break-word;
@@ -330,38 +366,12 @@
                 text-align: justify;
             }
 
-            #SysDevLangs {
-                display: grid;
-                grid-template-columns: repeat(4, 1fr);
-            }
-
-            #DataSciLangs {
-                display: grid;
-                grid-template-rows: 1fr 1fr;
-                grid-template-columns: repeat(4, 1fr);
-            }
-
-            #WebDevLangs {
-                display: grid;
-                grid-template-columns: repeat(4, 1fr);
-                ;
-                grid-template-rows: 1fr 1fr;
-
-            }
-
-            #SoftDevLangs {
-                display: grid;
-                grid-template-columns: 1fr 1fr 1fr;
-                grid-template-rows: 1fr 1fr;
-            }
-
             .skill {
-                height: 3.6rem;
+                height: 3.24rem;
                 text-align: center;
                 margin: 1rem;
                 padding: 0.3rem;
             }
-
         }
     }
 

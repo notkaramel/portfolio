@@ -47,12 +47,12 @@ const NavBar = () => {
                         {span("Side Projects")}
                     </a>
                 </li> */}
-                <li className="navbar-item" id="darkmode-button">
+                {/* <li className="navbar-item" id="darkmode-button">
                     <a href="#darkmode">
                         {darkmode_icon}
                         {span("Darkmode")}
                     </a>
-                </li>
+                </li> */}
             </ul>
         </nav>
     );
