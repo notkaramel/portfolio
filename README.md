@@ -7,3 +7,6 @@
 >
 > Official link: [antoinephan.me](https://antoinephan.me)
 
+![notkaramel's GitHub stats](https://github-readme-stats.vercel.app/api?username=notkaramel&show_icons=true&theme=tokyonight&count_private=true)
+
+
