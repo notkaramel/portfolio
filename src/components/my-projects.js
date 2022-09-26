@@ -12,12 +12,12 @@ class MyProjects extends React.Component {
         WordleHelper.setLink("./WordleHelper/")
         
         let JavaCalculator = new Project("Java Calculator", "https://github.com/notkaramel/JavaCalculator");
-        JavaCalculator.setLink("./JavaCalculator/");
         JavaCalculator.writePost("A calculator application written in Java (JDK 18)");
+        JavaCalculator.setLink("./JavaCalculator/");
 
         let Portfolio = new Project("Portfolio", "https://github.com/notkaramel/notkaramel.github.io");
-        Portfolio.setLink("https://antoinephan.me");
         Portfolio.writePost("This portfolio!");
+        Portfolio.setLink("https://antoinephan.me");
 
         let ChordProgressionBuilder = new Project("Chord Progression Builder", "https://github.com/notkaramel/ChordProgressionBuilder");
         ChordProgressionBuilder.writePost("An app that builds a chord progression based on your desired voice & progression.");
@@ -25,6 +25,10 @@ class MyProjects extends React.Component {
         let ArchLinuxARM = new Project("ArchLinux on ARM", "https://github.com/notkaramel/ArchLinux-ARM-Installer");
         ArchLinuxARM.writePost("ArchLinux installer for Raspberry Pi.");
         ArchLinuxARM.setLink("./ArchLinux-ARM-Installer/");
+
+        let RaspberryPi = new Project("Raspberry Pi", "https://github.com/notkaramel/RaspberryPi");
+        RaspberryPi.writePost("Experimenting with Raspberry Pi's GPIO pins and simple circuits");
+        RaspberryPi.setLink("./RaspberryPi/");
 
         return (
             <div className="projects" id="projects">
@@ -36,6 +40,7 @@ class MyProjects extends React.Component {
                     {Portfolio.createPost()}
                     {JavaCalculator.createPost()}
                     {ArchLinuxARM.createPost()}
+                    {RaspberryPi.createPost()}
                     {/* {WordleHelper.createPost()} */}
                     {/* {ChordProgressionBuilder.createPost()} */}
                 </section>

@@ -36,20 +36,22 @@
     .about-me-grid {
         // 3x3 grid
         // phone screen
-        
+
         @media (max-width: $screen-medium) {
             display: flex;
             flex-direction: column;
+
             .about-me-grid-item {
-                
+
                 &#name {
                     justify-self: center;
                 }
-                
+
                 &#education {
                     text-align: center;
                     justify-self: center;
                 }
+
                 &#profile-picture {
                     justify-self: center;
                 }
@@ -64,6 +66,7 @@
                 }
             }
         }
+
         // laptop screen
         @media (min-width: $screen-medium) {
             display: grid;
@@ -107,6 +110,7 @@
                 }
             }
         }
+
         padding: 1rem 2rem;
         align-items: center;
         height: max-content;
@@ -160,6 +164,7 @@
 
             &#social-media {
                 text-align: center;
+
                 svg {
                     fill: $dark-mint;
                     text-align: center;
@@ -176,6 +181,7 @@
 .projects {
     height: max-content;
     width: 100%;
+
     // Projects container
     .project-flex {
         display: flex;
@@ -274,15 +280,18 @@
         border-radius: 0.5em;
         box-shadow: $box-shadow-bold;
         padding: 1rem;
+
         // Phone Screen
-        @media (max-width: $screen-medium){
+        @media (max-width: $screen-medium) {
             display: flex;
             flex-direction: column;
             align-items: center;
+
             .submodule-grid {
-            height: max-content;
-            grid-template-rows: max-content 12rem max-content;
-            grid-template-columns: 60vw;
+                height: max-content;
+                grid-template-rows: repeat(3,max-content);
+                grid-template-columns: 60vw;
+
                 .submodule-item {
                     display: flex;
                     flex-direction: row;
@@ -291,9 +300,9 @@
                 }
             }
         }
-        
+
         // PC Screen
-        @media (min-width: $screen-medium){
+        @media (min-width: $screen-medium) {
             display: grid;
             grid-template-columns: 1fr 1fr;
             grid-template-rows: 1fr 1fr;
@@ -302,24 +311,25 @@
 
             .submodule-grid {
                 grid-template-rows: 3.6rem 12rem 9rem;
+
                 #SysDevLangs {
                     display: grid;
-                    grid-template-columns: repeat(4, 1fr);
+                    grid-template-columns: repeat(3, 1fr);
                 }
-            
+
                 #DataSciLangs {
                     display: grid;
                     grid-template-rows: 1fr;
-                    grid-template-columns: repeat(4, 1fr);
+                    grid-template-columns: repeat(3, 1fr);
                 }
-            
+
                 #WebDevLangs {
                     display: grid;
                     grid-template-columns: repeat(3, 1fr);
                     grid-template-rows: 1fr 1fr;
-            
+
                 }
-            
+
                 #SoftDevLangs {
                     display: grid;
                     grid-template-columns: repeat(3, 1fr);
@@ -327,7 +337,7 @@
                 }
             }
         }
-        
+
         // submodule-grid = skills-grid-item = section
         .submodule-grid {
             display: grid;
@@ -360,7 +370,8 @@
                 font-size: 1.24rem;
                 font-weight: 500;
                 text-align: justify;
-                a{
+
+                a {
                     text-decoration: none;
                     color: $dark-mint;
                     font-weight: 600;
@@ -378,50 +389,63 @@
 
 }
 
-.experience{
-     .container{
+.experience {
+    .container {
         color: $dark-mint;
-     }
-     .container-flex::after{
+    }
+
+    .container-flex::after {
         content: "no";
-        background-color:aqua;
-     }
+        background-color: aqua;
+    }
 }
 
 // Footer component
 .footer {
-    align-items: center;
-    width: 80vw;
-    padding: 0 1rem;
-    margin-bottom: 1rem;
-    box-shadow: $box-shadow-bold;
-    border-radius: 0.5rem;
-    padding: 1rem;
-    background-color: $pastel-mint;
-    .container{
+
+    // Phone Screen
+    @media (max-width: $screen-xsmall) {}
+
+    // PC Screen
+    @media (min-width: $screen-medium) {}
+
+    .footer-content {
+        padding: 0.12rem 0rem;
+        align-items: center;
+        margin-bottom: 1rem;
+        box-shadow: $box-shadow-bold;
         border-radius: 0.5rem;
-        box-shadow: $box-shadow;
-        padding: 0.3rem;
-        background-color: white;
-        margin: 1rem 2rem;
-        text-decoration: none;
-        text-align: center;
-        font-weight: 480;
-        font-size: 1.2rem;
-        color: black;
-        line-height: 1.5rem;
-        transition: all 2s ease-in-out;
-        a{
-            font-weight: bold;
-            color: $dark-mint;
+        background-color: $pastel-mint;
+
+        .container {
+            border-radius: 0.5rem;
+            box-shadow: $box-shadow;
+            padding: 0.1rem;
+            background-color: white;
+            margin: 1rem 2rem;
             text-decoration: none;
-            &:visited{
+            text-align: center;
+            font-weight: 480;
+            font-size: 1.2rem;
+            color: black;
+            line-height: 1.5rem;
+            transition: all 2s ease-in-out;
+
+            a {
+                font-weight: bold;
                 color: $dark-mint;
+                text-decoration: none;
+
+                &:visited {
+                    color: $dark-mint;
+                }
+
+                &:hover {
+                    text-shadow: $box-shadow-hover;
+                }
             }
-            &:hover{
-                text-shadow: $box-shadow-hover;
-            }
+
+            // padding: 1rem;
         }
-        // padding: 1rem;
     }
 }
