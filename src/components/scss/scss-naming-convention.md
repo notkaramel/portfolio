@@ -10,9 +10,9 @@
 - Structure map:
 ```html
 .navbar (<nav>)
-|---- .navbar-list (<ul>)
-|---- .navbar-list-item (<li>)
-|   |---- .nav-link (<a>)
+|---| .navbar-list (<ul>)
+|---| .navbar-list-item (<li>)
+|   |---| .nav-link (<a>)
 |       |--- (<svg>)
 |       |--- .nav-link-text (<span>)
 ```
