@@ -24,7 +24,7 @@ class MyProjects extends React.Component {
 
         let ArchLinuxARM = new Project("ArchLinux on ARM", "https://github.com/notkaramel/ArchLinux-ARM-Installer");
         ArchLinuxARM.writePost("ArchLinux installer for Raspberry Pi.");
-        ArchLinuxARM.setLink("./ArchLinux-ARM-Installer/");
+        ArchLinuxARM.setLink("./ArchLinux-on-ARM/");
 
         let RaspberryPi = new Project("Raspberry Pi", "https://github.com/notkaramel/RaspberryPi");
         RaspberryPi.writePost("Experimenting with Raspberry Pi's GPIO pins and simple circuits");
