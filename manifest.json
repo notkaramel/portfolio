@@ -1,0 +1,15 @@
+{
+  "short_name": "Antoine Phan",
+  "name": "Antoine Phan's Portfolio",
+  "icons": [
+    {
+      "src": "portfolio-favicon.svg",
+      "type": "image/svg",
+      "sizes": "32x32"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
