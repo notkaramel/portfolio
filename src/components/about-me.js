@@ -42,7 +42,9 @@ const AboutMe = () => {
                     <p>
                         {mcgill_rouge} <br />
                         <b>McGill University</b><br />
-                        U1 Electrical Engineering
+                        U2 Electrical Engineering<br />
+                        <i id="minor">Minor in Software Engineering &<br />
+                        Musical Science and Technology<br /></i>
                     </p>
                 </div>
 

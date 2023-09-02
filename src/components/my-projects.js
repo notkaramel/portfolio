@@ -3,9 +3,9 @@ import { github_icon, linkto_icon } from "./icons/icons";
 
 class MyProjects extends React.Component {
     render() {
-        let WebTutor = new Project("web_tutorial_b0k32a", "https://github.com/notkaramel/web_tutorial_B0K32A");
-        WebTutor.setLink("https://b0k32a-webtutor.herokuapp.com");
-        WebTutor.writePost("A front-end website written in HTML and CSS, then deployed on Heroku.");
+        // let WebTutor = new Project("web_tutorial_b0k32a", "https://github.com/notkaramel/web_tutorial_B0K32A");
+        // WebTutor.setLink("https://b0k32a-webtutor.herokuapp.com");
+        // WebTutor.writePost("A front-end website written in HTML and CSS, then deployed on Heroku.");
 
         let WordleHelper = new Project("Wordle Helper", "https://github.com/notkaramel/WordleHelper");
         WordleHelper.writePost("A Chrome extension that helps you solve Wordle puzzles.");
@@ -19,8 +19,8 @@ class MyProjects extends React.Component {
         Portfolio.writePost("This portfolio!");
         Portfolio.setLink("https://antoinephan.me");
 
-        let ChordProgressionBuilder = new Project("Chord Progression Builder", "https://github.com/notkaramel/ChordProgressionBuilder");
-        ChordProgressionBuilder.writePost("An app that builds a chord progression based on your desired voice & progression.");
+        // let ChordProgressionBuilder = new Project("Chord Progression Builder", "https://github.com/notkaramel/ChordProgressionBuilder");
+        // ChordProgressionBuilder.writePost("An app that builds a chord progression based on your desired voice & progression.");
 
         let ArchLinuxARM = new Project("ArchLinux on ARM", "https://github.com/notkaramel/ArchLinux-ARM-Installer");
         ArchLinuxARM.writePost("ArchLinux installer for Raspberry Pi.");
@@ -41,8 +41,6 @@ class MyProjects extends React.Component {
                     {JavaCalculator.createPost()}
                     {ArchLinuxARM.createPost()}
                     {RaspberryPi.createPost()}
-                    {/* {WordleHelper.createPost()} */}
-                    {/* {ChordProgressionBuilder.createPost()} */}
                 </section>
             </div>
         );

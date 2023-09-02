@@ -1,7 +1,7 @@
 {
   "name": "portfolio",
-  "version": "1.2.4",
-  "private": true,
+  "version": "1.2.5",
+  "private": false,
   "homepage": "https://antoinephan.me",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
